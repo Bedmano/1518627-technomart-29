@@ -1,540 +1,533 @@
-:root{
-    --basic-white:#ffffff;
-    --basic-black:#000000;
-    /* Адрес в футере */
-    --basic-white-opacity: rgba(255, 255, 255, 0.5);
-    --white:#f3f7f9;
-    /* фон загаловка каталога */
-    --whiter:#F2F6F8;
-   /* фон заголовков проихвотителей и товаров на главной странице */
-   --white-brown:#F9F5F0;
-    /* фон заголовков и фильтра в каталоге */
-    --light-brown:#F7F3EC;
-    /* цвета рамок товаров и производителей */
-    --outline-color:#EAEAEA;
-    /* фон блоков сервиса и информации про перфораторы  */
-    --blue-gray:#F1F5F7;
-    /* старая цена товаров */
-    --light-gray:#a9a9a9;
-    /* цвет оформления чекбоксов и наведения на кнопки каталога и преимуществ */
-    --forms-color:#C5C5C5;
-    /* Цвет чекбоксов при наведении */
-    --forms-active:#B5B5B5;
-    /* цвет техномарта и кнопок с ценой */
-    --basic-red:#ee3643;
-    /* цвет при клике */
-    --darker-red:#ba2732;
-    /* цвет при наведении */
-    --dark-red:#CA2C37;
-    /* оттенки серого */
-    --basic-navy:#293449;
-    /* цвет при клике в формах хедера */
-    --dark-navy:#161D29;
-    /* второй тёмно-синий по частоте использования(!у кнопки в закладки цвет бордера этого цвета!) */
-    --light-navy:#32425C;
-    /* цвет ховера аватара и выхода из аккаунта */
-    --login-navy:#3D546F;
-    /* цвет при клике в навигации */
-    --darker-navy:#1D2739;
-    /*цвет кнопок связанных с заказом */
-    --basic-green:#63A63E;
-    /* наведение на кнопки связанные с заказом */
-    --light-green:#5FBB2D;
-    /* цвет зеленых кнопок при клике */
-    --green:#518534;
-    /* цвет теней зеленых кнопок */
-    --dark-green:#367315;
-    /* цвета фона иконок соцсетей */
-    --black-navy:#212A3A;
-    /* цвета преимуществ */
-    --mint:#8ED78F;
-    --yellow:#FFBF47;
-    --gold:#ffd180;
-    --lilac:#DC91D8;
-    --lightblue:#3BBCE3;
-    --yellow:#FFC047;
+:root {
+  --basic-white: #ffffff;
+  --basic-black: #000000;
+  /* Адрес в футере */
+  --basic-white-opacity: rgba(255, 255, 255, 0.5);
+  --white: #f3f7f9;
+  /* фон загаловка каталога */
+  --whiter: #f2f6f8;
+  /* фон заголовков проихвотителей и товаров на главной странице */
+  --white-brown: #f9f5f0;
+  /* фон заголовков и фильтра в каталоге */
+  --light-brown: #f7f3ec;
+  /* цвета рамок товаров и производителей */
+  --outline-color: #eaeaea;
+  /* фон блоков сервиса и информации про перфораторы  */
+  --blue-gray: #f1f5f7;
+  /* старая цена товаров */
+  --light-gray: #a9a9a9;
+  /* цвет оформления чекбоксов и наведения на кнопки каталога и преимуществ */
+  --forms-color: #c5c5c5;
+  /* Цвет чекбоксов при наведении */
+  --forms-active: #b5b5b5;
+  /* цвет техномарта и кнопок с ценой */
+  --basic-red: #ee3643;
+  /* цвет при клике */
+  --darker-red: #ba2732;
+  /* цвет при наведении */
+  --dark-red: #ca2c37;
+  /* оттенки серого */
+  --basic-navy: #293449;
+  /* цвет при клике в формах хедера */
+  --dark-navy: #161d29;
+  /* второй тёмно-синий по частоте использования(!у кнопки в закладки цвет бордера этого цвета!) */
+  --light-navy: #32425c;
+  /* цвет ховера аватара и выхода из аккаунта */
+  --login-navy: #3d546f;
+  /* цвет при клике в навигации */
+  --darker-navy: #1d2739;
+  /*цвет кнопок связанных с заказом */
+  --basic-green: #63a63e;
+  /* наведение на кнопки связанные с заказом */
+  --light-green: #5fbb2d;
+  /* цвет зеленых кнопок при клике */
+  --green: #518534;
+  /* цвет теней зеленых кнопок */
+  --dark-green: #367315;
+  /* цвета фона иконок соцсетей */
+  --black-navy: #212a3a;
+  /* цвета преимуществ */
+  --mint: #8ed78f;
+  --yellow: #ffbf47;
+  --gold: #ffd180;
+  --lilac: #dc91d8;
+  --lightblue: #3bbce3;
+  --yellow: #ffc047;
 }
-Body{
- font-family:'Cuprum', Arial, sans-serif;
- font-size:18px;
- line-height:24px;
- font-weight:400;
+body {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
 }
-.main-header{
-    background-color:var(--blue-gray);
+.main-header {
+  background-color: var(--blue-gray);
 }
-.header-forms{
-    background-color:var(--basic-navy);
-    color:var(--basic-white);
+.header-forms {
+  background-color: var(--basic-navy);
+  color: var(--basic-white);
 }
-.shop-name{
-    background-color:var(--basic-red);
-    box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+.shop-name {
+  background-color: var(--basic-red);
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
 }
-.place-order button{
- background-color:var(--basic-green);
- color:inherit;
+.place-order button {
+  background-color: var(--basic-green);
+  color: inherit;
 }
 .search input[type="search"],
 .bookmarks button,
-.cart button{
-    background-color:transparent;
-    color:inherit;
+.cart button {
+  background-color: transparent;
+  color: inherit;
 }
-header a{
-    text-decoration:none;
-    color:inherit;
+header a {
+  text-decoration: none;
+  color: inherit;
 }
-
-.shop-subtitle{
- color:var(--basic-red);
- font-size:16px;
- line-height:23px;
+.login-forms,
+.phone-number {
+  font-size: 21px;
 }
-.phone-number{
-    color:var(--basic-red);
-    font-size:21px;
-    line-height:30px;
-    font-weight:700;
+.shop-subtitle,
+.phone-number {
+  color: var(--basic-red);
 }
-.shop-adress{
-    font-size:14px;
-    color:var(--light-navy);
+.shop-subtitle {
+  font-size: 16px;
+  line-height: 23px;
 }
-.login-forms{
-font-size:21px;
-line-height:21px;
+.phone-number {
+  line-height: 30px;
+  font-weight: 700;
 }
-.pagination{
-background-color:var(--light-navy);
-
+.shop-adress {
+  font-size: 14px;
+  color: var(--light-navy);
+}
+.login-forms {
+  line-height: 21px;
+}
+.pagination {
+  background-color: var(--light-navy);
 }
 .pagination a,
-.pagination-footer a{
-    color:var(--basic-white);
-    text-decoration:none;
+.pagination-footer a {
+  color: var(--basic-white);
+  text-decoration: none;
 }
-.feature-item{
-    color:var(--basic-white);
-    width:300px;
-    height:123px;
+.feature-item {
+  color: var(--basic-white);
+  width: 300px;
+  height: 123px;
 }
-.feature-item a{
-    color:var(--basic-white);
-    text-decoration:none;
-    background-color:rgba(255, 255, 255, 0.3);
+.feature-item a {
+  color: var(--basic-white);
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.3);
 }
-.feature h3{
-    font-size:24px;
-    font-weight:700;
-    line-height:30px;
+.feature h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
 }
-.feature-item:first-of-type{
-    background-color:var(--gold);
-   
+.feature-item:first-of-type {
+  background-color: var(--gold);
 }
-.feature-item:nth-of-type(2){
-    background-color:var(--lightblue);
-
+.feature-item:nth-of-type(2) {
+  background-color: var(--lightblue);
 }
-.feature-item:nth-of-type(3){
-    background-color:var(--lilac);
-  
+.feature-item:nth-of-type(3) {
+  background-color: var(--lilac);
 }
-.feature-item:nth-of-type(4){
-    background-color:var(--mint);
- 
+.feature-item:nth-of-type(4) {
+  background-color: var(--mint);
 }
-.feature-item:last-of-type{
-    background-color:var(--yellow);
+.feature-item:last-of-type {
+  background-color: var(--yellow);
 }
- .features-header{
-    font-size:36px;
-    font-weight:700px;
-    line-height:36px;
- }
- 
-
-.button{
-     font-size:18px;
-     line-height:24px;
-     color:var(--basic-white);
-     background-color:var(--basic-red);
-     text-decoration:none;
- }
-
- .popular-header{
-     background-color:var(--white-brown);
-     color:var(--light-navy);
-     font-size:30px;
-     line-height:30px;
- }
- .goods{
-     font-family:'PT Sans', Arial, sans-serif;
-     font-weight:700;
-     border:1px solid var(--outline-color);
- }
- .goods h3{
-     line-height:20px;
-     font-size:18px;
- }
- .goods span{
-     font-size:17px;
-     line-height:18px;
-     color:var(--light-gray);
-     text-decoration:line-through;
- }
- .maker-logo{
-     width:220px;
-     height:145px;
-     border:1px solid var(--outline-color);
- }
- .price{
-    font-size:17px;
-    line-height:18px;
-    color:var(--basic-white);
-    background-color:var(--basic-red);  
- }
- .services{
-     background-color:var(--blue-gray);
-     line-height:30px;
- }
- .services h2,
- .slider-active h3,
- .services-slider button,
- .shop-info h2,
- .shop-map h2{
-     font-size:30px;
-     line-height:30px;
- }
- .text{
-    font-family:'PT Sans', Arial, sans-serif;
-    font-weight:400;
-    font-size:13px;
-    line-height:24px;
- }
- .services-slider button{
-    font-size:21px;
-    font-weight:700;
-    width:240px;
-    height:61px;
-    color:var(--basic-white);
-    background-color:var(--light-navy);
- }
- button.activated{
-     color:var(--light-navy);
-     background-color:var(--basic-white);
-     border:none;
- }
-.main-footer{
-    background-color:var(--light-navy);
-}
-.shop-contacts{
-    color:var(--white);
-}
-.site-navigation a{
-    color:var(--gold);
-}
-.feedback-footer{
-background-color:var(--basic-navy);
-    font-size:16px;
-    line-height:18px;   
-}
-.copy{
-    color:var(--basic-white);
-}
-.socials li{
-    background:var(--black-navy);
-    width:44px;
-    height:44px;
-    border-radius: 50%;
-}
-.links-list{
-    color:var(--basic-white)
-}
-.links-list a{
-    color:var(--gold);
+.features-header {
+  font-size: 36px;
+  font-weight: 700px;
+  line-height: 36px;
 }
 
+.button {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  text-decoration: none;
+}
+
+.popular-header {
+  background-color: var(--white-brown);
+  color: var(--light-navy);
+  font-size: 30px;
+  line-height: 30px;
+}
+.goods {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 700;
+  border: 1px solid var(--outline-color);
+}
+.goods h3 {
+  line-height: 20px;
+  font-size: 18px;
+}
+.goods span {
+  font-size: 17px;
+  line-height: 18px;
+  color: var(--light-gray);
+  text-decoration: line-through;
+}
+.maker-logo {
+  width: 220px;
+  height: 145px;
+  border: 1px solid var(--outline-color);
+}
+.price {
+  font-size: 17px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+.services {
+  background-color: var(--blue-gray);
+  line-height: 30px;
+}
+.services h2,
+.slider-active h3,
+.services-slider button,
+.shop-info h2,
+.shop-map h2 {
+  font-size: 30px;
+  line-height: 30px;
+}
+.text {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+}
+.services-slider button {
+  font-size: 21px;
+  font-weight: 700;
+  width: 240px;
+  height: 61px;
+  color: var(--basic-white);
+  background-color: var(--light-navy);
+}
+button.activated {
+  color: var(--light-navy);
+  background-color: var(--basic-white);
+  border: none;
+}
+.main-footer {
+  background-color: var(--light-navy);
+}
+.shop-contacts {
+  color: var(--white);
+}
+.site-navigation a {
+  color: var(--gold);
+}
+.feedback-footer {
+  background-color: var(--basic-navy);
+  font-size: 16px;
+  line-height: 18px;
+}
+.copy {
+  color: var(--basic-white);
+}
+.socials li {
+  background: var(--black-navy);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.links-list {
+  color: var(--basic-white);
+}
+.links-list a {
+  color: var(--gold);
+}
 
 /* стили каталога */
 
-
-.user-info{
-    width:299px;
-    height:45px;
-    font-size:21px;
-    line-height:21px;
+.user-info {
+  width: 299px;
+  height: 45px;
+  font-size: 21px;
+  line-height: 21px;
 }
-.user-links{
-    font-size:16px;
-    line-height:18px;
-    color:var(--light-navy);
+.user-links {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--light-navy);
 }
 .breadcrumbs,
 .filter,
-.sort{
-    font-family:'PT Sans', Arial, sans-serif;
+.sort {
+  font-family: "PT Sans", Arial, sans-serif;
 }
-.catalog-header{
-    font-size:30px;
-    line-height:30px;
-    color:var(--light-navy);
-    background-color:var(--whiter);
+.catalog-header {
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--light-navy);
+  background-color: var(--whiter);
 }
 
-.sort{
-    background-color:var(--light-brown);
-    text-transform:uppercase;
+.sort {
+  background-color: var(--light-brown);
+  text-transform: uppercase;
 }
-.sort button{
-    text-transform:inherit;
+.sort button {
+  text-transform: inherit;
 }
 /* тут у меня рамка получилась с прозрачностью, пока не могу понять как поменять разметку(или стили),чтобы сделать нормально*/
-.sort-unactive{
-opacity:0.3;
-border:none;
-border-bottom:1px dotted var(--basic-red);
+.sort-unactive {
+  opacity: 0.3;
+  border: none;
+  border-bottom: 1px dotted var(--basic-red);
 }
 .sort-active {
-    color:var(--basic-red);
+  color: var(--basic-red);
 }
-.filter-header{
-    font-size:13px;
-    line-height:18px;
-    background-color:var(--light-brown);
+.filter-header {
+  font-size: 13px;
+  line-height: 18px;
+  background-color: var(--light-brown);
 }
-.filter h4{
-    font-size:17px;
-    line-height:30px;
-    font-weight:700;
-    text-transform:uppercase;
+.filter h4 {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 .breadcrumbs,
-.sort{
-    font-size:13px;
-    line-height:24px;
+.sort {
+  font-size: 13px;
+  line-height: 24px;
 }
 .radio,
-.checkbox{
-    font-size:15;
-    line-height:19px;
-    text-transform:uppercase;
+.checkbox {
+  font-size: 15;
+  line-height: 19px;
+  text-transform: uppercase;
 }
 
 input[type="radio"],
-input[type="checkbox"]{
-    display:none;
+input[type="checkbox"] {
+  display: none;
 }
-.range{
-    background:var(--light-brown);
+.range {
+  background: var(--light-brown);
 }
-.catalog-buttons{
-    font-family:'PT Sans', Arial, sans-serif;
-    font-size:13px;
-    line-height:18px;
-    text-transform:uppercase;
-    border: 1px solid #E5E5E5;
-    background-color:var(--basic-white);
+.catalog-buttons {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border: 1px solid #e5e5e5;
+  background-color: var(--basic-white);
 }
-.goods{
-    width:220px;
-    height:318px;
-    box-sizing: border-box;
-    border:1px solid #EAEAEA;
-    background:var(--basic-white);
-    padding-top:22px;
-    padding-left:33px;
+.goods {
+  width: 220px;
+  height: 318px;
+  box-sizing: border-box;
+  border: 1px solid #eaeaea;
+  background: var(--basic-white);
+  padding-top: 22px;
+  padding-left: 33px;
 }
-.buy{
-    background-color:var(--basic-green);
-    box-shadow: inset 0px -3px 0px #367315;
-    font-size:14px;
-    line-height:18px;
-    color:var(--basic-white);
+.buy {
+  background-color: var(--basic-green);
+  box-shadow: inset 0px -3px 0px #367315;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
 }
-.to-bookmarks{
-    background-color:var(--basic-white);
-    border: 3px solid #63A63E;
-    color:var(--light-navy);
+.to-bookmarks {
+  background-color: var(--basic-white);
+  border: 3px solid #63a63e;
+  color: var(--light-navy);
 }
-.active{
-    background-color:var(--basic-red);
-    color:var(--basic-white);
+.active {
+  background-color: var(--basic-red);
+  color: var(--basic-white);
 }
-.aside{
-    background-color:var(--blue-gray);
+.aside {
+  background-color: var(--blue-gray);
 }
 .bookmarks img,
 .cart img,
-.search img{
-    opacity:0.3
+.search img {
+  opacity: 0.3;
 }
-.popup{
-    display:none;
+.popup {
+  display: none;
 }
 /* Ховеры и активное состояние */
 /* верх шапки */
-.place-order:hover button{
-    background-color:var(--light-green);
+.place-order:hover button {
+  background-color: var(--light-green);
 }
 .place-order:active button,
 .bookmarks:active button,
-.cart:active button{
-    color:var(--basic-white-opacity);
+.cart:active button {
+  color: var(--basic-white-opacity);
 }
 
 .bookmarks:active button,
-.cart:active button{
-    background-color:var(--dark-navy);
+.cart:active button {
+  background-color: var(--dark-navy);
 }
-.shop-name{
-    background-color:var(--basic-red);
+.shop-name {
+  background-color: var(--basic-red);
 }
-.shop-name:active{
-    background-color:var(--darker-red);
+.shop-name:active {
+  background-color: var(--darker-red);
 }
-.search:hover img{
-    opacity:0;
+.search:hover img {
+  opacity: 0;
 }
 /* Не уверен правильной ли получлось подобрать псевдокласс */
-input[type="search"]:hover{
-background-color:var(--basic-white);
-color:var(--basic-black);
+input.search[type="search"]:hover {
+  background-color: var(--basic-white);
+  color: var(--basic-black);
 }
-input[type="search"]:hover img{
-    background-color:var(--basic-red);
+input.search[type="search"]:hover img {
+  background-color: var(--basic-red);
 }
 /* поля логина */
 .sign-in,
-.register{
-    background-color:var(--basic-white);
+.register {
+  background-color: var(--basic-white);
 }
-.sign-in img{
-    background-color:var(--forms-color);
+.sign-in img {
+  background-color: var(--forms-color);
 }
-.sign-in:hover, 
-.register:hover{
-    color:var(--basic-red);
+.sign-in:hover,
+.register:hover {
+  color: var(--basic-red);
 }
-.sign-in:active, 
-.register:active{
-    color:var(--forms-color);
+.sign-in:active,
+.register:active {
+  color: var(--forms-color);
 }
 .user-avatar:hover,
-.logout:hover{
-    color:var(--login-navy);
+.logout:hover {
+  color: var(--login-navy);
 }
 .my-orders:hover,
-.personal-account:hover{
-    color:var(--basic-red);
+.personal-account:hover {
+  color: var(--basic-red);
 }
 .user-name:active,
 .logout:active,
 .my-orders:active,
-.personal-account:active{
-    color:var(--forms-color);
+.personal-account:active {
+  color: var(--forms-color);
 }
 /* навигация по сайту */
-.pagination li:hover{
-    background-color:var(--basic-navy);
+.pagination li:hover {
+  background-color: var(--basic-navy);
 }
-.pagination li:active{
-    background-color:var(--darker-navy);
-    opacity:0.5;
+.pagination li:active {
+  background-color: var(--darker-navy);
+  opacity: 0.5;
 }
 /* Преимущества */
-.feature-item a:hover{
-    background-color:rgba(197, 197, 197, 0.3)
+.feature-item a:hover {
+  background-color: rgba(197, 197, 197, 0.3);
 }
-.feature-item a:active{
-    background-color:rgba(169, 169, 169, 0.3);
+.feature-item a:active {
+  background-color: rgba(169, 169, 169, 0.3);
 }
 /* Красные кнопки на всех страницах */
-.button:hover{
-    background-color:var(--dark-red);
+.button:hover {
+  background-color: var(--dark-red);
 }
-.button:active{
-    background-color:var(--darker-red);
+.button:active {
+  background-color: var(--darker-red);
 }
 /* Карточка товаров в каталоге */
-.goods:hover .popup{
-    display:block;
+.goods:hover .popup {
+  display: block;
 }
-.goods:hover{
-    box-shadow:0px 4px 20px rgba(0, 0, 0, 0.15);
+.goods:hover {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
-.buy:hover{
-    background-color:var(--light-green);
+.buy:hover {
+  background-color: var(--light-green);
 }
-.buy:active{
-    background-color:var(--green);
+.buy:active {
+  background-color: var(--green);
 }
-.to-bookmarks:hover{
-    border-color:var(--light-navy);
+.to-bookmarks:hover {
+  border-color: var(--light-navy);
 }
-.to-bookmarks:active{
-    border-color:var(--light-navy);
-    opacity:0.5;
+.to-bookmarks:active {
+  border-color: var(--light-navy);
+  opacity: 0.5;
 }
 /* карточки производителей */
-.maker-logo:hover{
-    box-shadow:0px 4px 20px rgba(0, 0, 0, 0.15);
+.maker-logo:hover {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
-.maker-logo:active{
-    opacity:0.5;
-    box-shadow:0px 4px 20px rgba(0, 0, 0, 0.15);
+.maker-logo:active {
+  opacity: 0.5;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 /* сортировка */
-.sort-list button:hover{
-    opacity:1;
-    border-bottom:1px solid var(--basic-red);
+.sort-list button:hover {
+  opacity: 1;
+  border-bottom: 1px solid var(--basic-red);
 }
 /* переключение между страницами каталога */
-.catalog-buttons:hover{
-    border:1px solid #C5C5C5;
-}   
-.catalog-buttons:active{
-    border:1px solid #EE3643;
+.catalog-buttons:hover {
+  border: 1px solid #c5c5c5;
+}
+.catalog-buttons:active {
+  border: 1px solid #ee3643;
 }
 /* Заготовки для кнопок фильтра */
-.radio-button{
-    background-image:url(img/placeholder/25x25.svg);
-
+.radio-button {
+  background-image: url(img/placeholder/25x25.svg);
 }
-.radio-button:hover{
-    background-image:url(img/placeholder/25x25.svg);
+.radio-button:hover {
+  background-image: url(img/placeholder/25x25.svg);
 }
-.radio-button:active{
-    background-image:url(img/placeholder/25x25.svg);
+.radio-button:active {
+  background-image: url(img/placeholder/25x25.svg);
 }
-.checkbox-button{
-    background-image:url(img/placeholder/25x25.svg);
-
+.checkbox-button {
+  background-image: url(img/placeholder/25x25.svg);
 }
-.checkbox-button:hover{
-    background-image:url(img/placeholder/25x25.svg);
+.checkbox-button:hover {
+  background-image: url(img/placeholder/25x25.svg);
 }
-.checkbox-button:active{
-    background-image:url(img/placeholder/25x25.svg);
+.checkbox-button:active {
+  background-image: url(img/placeholder/25x25.svg);
 }
-.services-slider:hover{
-    background-color:var(--basic-navy);
+.services-slider:hover {
+  background-color: var(--basic-navy);
 }
 .pagination-footer a,
 .site-navigation a,
-.links-list a{
-text-decoration:none;
+.links-list a {
+  text-decoration: none;
 }
 .pagination-footer a:hover,
 .site-navigation a:hover,
-.links-list a:hover{
-    text-decoration:underline;
+.links-list a:hover {
+  text-decoration: underline;
 }
 .pagination-footer a:active,
-.site-navigation a:active{
-    opacity:0.5;
+.site-navigation a:active {
+  opacity: 0.5;
 }
-.links-list a:active{
-    color:var(--basic-red);
+.links-list a:active {
+  color: var(--basic-red);
 }
