@@ -15,7 +15,7 @@
   <header class="main-header">
     <section class="header-forms">
       <h2>Формы ввода</h2>
-      <img src="https://via.placeholder.com/220x47" width="220" height="47" class="shop-name" alt="Техномарт">
+      <img src="img/logo.svg" width="220" height="47" class="shop-name" alt="Техномарт">
       <div class="search">
         <input type="search" name="search" placeholder="Поиск">
       </div>
@@ -42,11 +42,13 @@
     <section class="login-forms">
       <h2>Пользователь</h2>
       <div class="user-info">
-        <a href="#" title="Иконка" class="user-avatar"><img src="https://via.placeholder.com/20x18"
-            alt="Иконка пользователя" width="20" height="18">Аватар</a>
+        <div class="user-avatar">
+          <a href="#" title="Иконка">Аватар</a>
+        </div>
         <a href="#" class="user-name">Равшан Джамшутович</a>
-        <a href="#" title="выйти из аккаунта" class="logout"><img src="https://via.placeholder.com/20x17" width="20"
-            height="17" alt="иконка выхода из аккаунта"></a>
+        <div class="logout">
+          <a href="#" title="выйти из аккаунта">1</a>
+        </div>
       </div>
       <div class="user-links">
         <a href="#" class="my-orders">Мои заказы</a>
@@ -83,11 +85,11 @@
       </div>
       <h4>Производители:</h4>
       <div class="checkbox">
+        <div class="checkbox-button checkbox-on"></div>
+          <label><input type="checkbox" name="makers">BOSCH</label>
         <div class="checkbox-button"></div>
-        <label><input type="checkbox" name="makers">BOSCH</label>
-        <div class="checkbox-button"></div>
-        <label><input type="checkbox" name="makers">Интерскол</label>
-        <div class="checkbox-button"></div>
+        <label><input type="checkbox" name="on">Интерскол</label>
+        <div class="checkbox-button  checkbox-true"></div>
         <label><input type="checkbox" name="makers">Makita</label>
         <div class="checkbox-button"></div>
         <label><input type="checkbox" name="makers">DeWalt</label>
@@ -96,7 +98,7 @@
       </div>
       <div class="radio">
         <h4>Питание:</h4>
-        <div class="radio-button"></div>
+        <div class="radio-button radio-on"></div>
         <label><input type="radio" name="power">Аккумуляторные</label>
         <div class="radio-button"></div>
         <label class="radio-button"><input type="radio" name="power">Сетевые</label>
@@ -109,77 +111,78 @@
         <li><button type="button" class="sort-active">По цене</button></li>
         <li><button type="button" class="sort-unactive">По типу</button></li>
         <li><button type="button" class="sort-unactive">По функционалу</button></li>
-        <li><button type="button" class="sort-unactive ascending">По возрастанию</button></li>
-        <li><button type="button" class="sort-unactive descending">По убыванию</button></li>
+        <li><button type="button" class="sort-unactive ascending"></button></li>
+        <li><button type="button" class="sort-unactive descending"></button></li>
       </ul>
+  
     </section>
     <section class="goods-list">
       <h2>Каталог</h2>
       <!-- 1-й товар -->
       <div class="goods">
-        <img src="https://via.placeholder.com/144x128" alt="Перфоратор BOSCHBFG 6000" width="144" height="128">
+        <img src="img/bosch6000.jpg" alt="Перфоратор BOSCHBFG 6000" width="144" height="128">
         <h3>Перфоратор BOSCHBFG 6000</h3>
         <span>30500 Р.</span><br>
-        <button type="button" class="price">25500 Р.</button>
+        <button type="button" class="price"><img src="img/red-button.svg" alt="кнопка с ценой" width="141" height="38">25500 Р.</button>
       </div>
       <!-- 2-й товар -->
       <div class="goods">
-        <img src="https://via.placeholder.com/144x128" alt="Перфоратор BOSCHBFG 6000" width="144" height="128">
+        <img src="img/bosch6000.jpg" alt="Перфоратор BOSCHBFG 6000" width="144" height="128">
         <h3>Перфоратор BOSCHBFG 6000</h3>
         <span>30500 Р.</span><br>
-        <button type="button" class="price">25500 Р.</button>
+        <button type="button" class="price"><img src="img/red-button.svg" alt="кнопка с ценой" width="141" height="38">25500 Р.</button>
       </div>
       <!-- 3-й товар -->
       <div class="goods goods-on-hover new">
-        <img src="https://via.placeholder.com/144x128" alt="Перфоратор BOSCHBFG 6000" width="144" height="128">
+        <img src="img/bosch6000.jpg" alt="Перфоратор BOSCHBFG 6000" width="144" height="128">
         <div class="popup">
           <button type="button" class="buy">Купить</button>
           <button type="button" class="to-bookmarks">В закладки</button>
         </div>
-        <img src="https://via.placeholder.com/144x128" alt="Перфоратор BOSCHBFG 6000" width="144" height="128" hidden>
+        <img src="img/bosch6000.jpg" alt="Перфоратор BOSCHBFG 6000" width="144" height="128" hidden>
         <h3>Перфоратор BOSCHBFG 6000</h3>
         <span>30500 Р.</span><br>
-        <button type="button" class="price">25500 Р.</button>
+        <button type="button" class="price"><img src="img/red-button.svg" alt="кнопка с ценой" width="141" height="38">25500 Р.</button>
       </div>
       <!-- 4-й товар -->
       <div class="goods new">
-        <img src="https://via.placeholder.com/127x112" alt="Перфоратор BOSCHBFG 3000" width="127" height="112">
+        <img src="img/bosch3000.jpg" alt="Перфоратор BOSCHBFG 3000" width="127" height="112">
         <h3>Перфоратор BOSCHBFG 3000</h3>
         <span>22500 Р.</span><br>
-        <button type="button" class="price">15500 Р.</button>
+        <button type="button" class="price"><img src="img/red-button.svg" alt="кнопка с ценой" width="141" height="38">15500 Р.</button>
       </div>
       <!-- 5-й товар -->
       <div class="goods">
-        <img src="https://via.placeholder.com/144x128" alt="Перфоратор BOSCHBFG 6000" width="144" height="128">
+        <img src="img/bosch6000.jpg" alt="Перфоратор BOSCHBFG 6000" width="144" height="128">
         <h3>Перфоратор BOSCHBFG 6000</h3>
         <span>30500 Р.</span><br>
-        <button type="button" class="price">25500 Р.</button>
+        <button type="button" class="price"><img src="img/red-button.svg" alt="кнопка с ценой" width="141" height="38">25500 Р.</button>
       </div>
       <!-- 6-й товар -->
       <div class="goods new">
-        <img src="https://via.placeholder.com/127x112" alt="Перфоратор BOSCHBFG 2000" width="127" height="112">
+        <img src="img/bosch3000.jpg" alt="Перфоратор BOSCHBFG 2000" width="127" height="112">
         <h3>Перфоратор BOSCHBFG 2000</h3>
-        <button type="button" class="price">12500 Р.</button>
+        <button type="button" class="price"><img src="img/red-button.svg" alt="кнопка с ценой" width="141" height="38">12500 Р.</button>
       </div>
       <!-- 7-й товар -->
       <div class="goods new">
-        <img src="https://via.placeholder.com/127x112" alt="Перфоратор BOSCHBFG 3000" width="127" height="112">
+        <img src="img/bosch3000.jpg" alt="Перфоратор BOSCHBFG 3000" width="127" height="112">
         <h3>Перфоратор BOSCHBFG 3000</h3>
         <span>22500 Р.</span><br>
-        <button type="button" class="price">15500 Р.</button>
+        <button type="button" class="price"><img src="img/red-button.svg" alt="кнопка с ценой" width="141" height="38">15500 Р.</button>
       </div>
       <!-- 8-й товар -->
       <div class="goods">
-        <img src="https://via.placeholder.com/144x128" alt="Перфоратор BOSCHBFG 6000" width="144" height="128">
+        <img src="img/bosch6000.jpg" alt="Перфоратор BOSCHBFG 6000" width="144" height="128">
         <h3>Перфоратор BOSCHBFG 6000</h3>
         <span>30500 Р.</span><br>
-        <button type="button" class="price">25500 Р.</button>
+        <button type="button" class="price"><img src="img/red-button.svg" alt="кнопка с ценой" width="141" height="38">25500 Р.</button>
       </div>
       <!-- 9-й товар -->
       <div class="goods new">
-        <img src="https://via.placeholder.com/127x112" alt="Перфоратор BOSCHBFG 2000" width="127" height="112">
+        <img src="img/bosch3000.jpg" alt="Перфоратор BOSCHBFG 2000" width="127" height="112">
         <h3>Перфоратор BOSCHBFG 2000</h3>
-        <button type="button" class="price">12500 Р.</button>
+        <button type="button" class="price"><img src="img/red-button.svg" alt="кнопка с ценой" width="141" height="38">12500 Р.</button>
       </div>
     </section>
     <ul class="catalog-links">
@@ -201,7 +204,7 @@
   </main>
   <footer class="main-footer">
     <nav class="pagination-footer">
-      <img src="https://via.placeholder.com/220x47" width="220" height="47" class="shop-name" alt="Техномарт">
+      <img src="img/logo.svg" width="220" height="47" class="shop-name" alt="Техномарт">
       <ul class="navigation-list">
         <li><a href="index.html">Главная</a></li>
         <li><a href="#">Компания</a></li>
