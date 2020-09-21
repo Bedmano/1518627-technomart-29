@@ -240,11 +240,18 @@ button.activated {
 .copy {
   color: var(--basic-white);
 }
+.goods button {
+  background-image: url(img/red-button.svg);
+  background-repeat: no-repeat;
+}
 .socials li {
   background: var(--black-navy);
   width: 44px;
   height: 44px;
   border-radius: 50%;
+}
+.socials li:hover{
+  background-color:var(--basic-red);
 }
 .links-list {
   color: var(--basic-white);
@@ -258,102 +265,32 @@ button.activated {
   background-repeat: no-repeat;
   opacity: 0.3;
 }
-.bookmarks button {
-  background-image: url(../img/icon-bookmark.svg);
-  background-repeat: no-repeat;
+.bookmarks svg,
+.cart svg{
   opacity: 0.3;
 }
-.cart button {
-  background-image: url(../img/icon-cart.svg);
-  background-repeat: no-repeat;
-  opacity: 0.3;
-}
+
 .search input[type="search"]:hover,
-.bookmarks button:hover,
-.cart button:hover {
+.bookmarks button:hover svg,
+.cart button:hover svg{
   opacity: 1;
 }
 .search input[type="search"]:active,
-.bookmarks button:active,
-.cart button:active {
+.bookmarks button:active svg,
+.cart button:active svg{
   opacity: 0.5;
 }
-li.social-vk {
-  background-image: url(../img/icon-vk.svg);
-  background-repeat: no-repeat;
-}
-li.social-facebook {
-  background-image: url(../img/icon-fb.svg);
-  background-repeat: no-repeat;
-}
-li.social-instagramm {
-  background-image: url(../img/icon-insta.svg);
-  background-repeat: no-repeat;
-}
-.phone-number {
-  background-image: url(../img/icon-phone.svg);
-  background-repeat: no-repeat;
-}
-.sign-in {
-  background-image: url(../img/icon-login.svg);
-  background-repeat: no-repeat;
-}
-.user-avatar a{
-  background-image: url(../img/icon-user.svg);
-  background-repeat: no-repeat;
-}
-.logout{
-  background-image: url(../img/icon-logout.svg);
-  background-repeat: no-repeat;
-}
 .new,
-.goods.new{
+.goods.new {
   background-image: url(../img/new.svg);
   background-repeat: no-repeat;
-  
 }
-.breadcrumbs li:first-child{
-  background-image: url(../img/icon-home.svg);
-  background-repeat: no-repeat;
+
+.sort-unactive.ascending,
+.sort-unactive.descending {
+  border: none;
 }
-/* 'это иконка стрелочка в хлебных крошках каталога(пока что не работатет) */
-.breadcrumbs:nth-child(2) li:before{
-  background-image: url(../img/icon-right-small.svg);
-  background-repeat: no-repeat;
-  content:"";
-}
-.sort-unactive.ascending{
-  background-image: url(../img/icon-down-dir.svg);
-  background-repeat: no-repeat;
-  transform:rotate(180deg);
-  width:11px;
-  height:10px;
-  border:none;
-}
-.sort-unactive.descending{
-  background-image: url(../img/icon-down-dir.svg);
-  background-repeat: no-repeat;
-  width:11px;
-  height:10px;
-  border:none;
-}
-/* пока что не видны */
-.checkbox-on{
-  background-image: url(../img/checkbox-on.svg);
-  background-repeat: no-repeat;
-}
-.checkbox-button{
-  background-image: url(../img/checkbox-off.svg);
-  background-repeat: no-repeat;
-}
-.radio-button{
-  background-image: url(../img/radio-off.svg);
-  background-repeat: no-repeat;
-}
-.radio-on{
-  background-image: url(../img/radio-on.svg);
-  background-repeat: no-repeat;
-}
+
 /* стили каталога */
 
 .user-info {
@@ -387,7 +324,7 @@ li.social-instagramm {
   text-transform: inherit;
 }
 /* тут у меня рамка получилась с прозрачностью, пока не могу понять как поменять разметку(или стили),чтобы сделать нормально*/
-.sort-unactive{
+.sort-unactive {
   opacity: 0.3;
   border: none;
   border-bottom: 1px dotted var(--basic-red);
@@ -417,7 +354,34 @@ li.social-instagramm {
   line-height: 19px;
   text-transform: uppercase;
 }
-
+/* спасибо за подсказку. Оно заработало. позже когда именно задание на формы будет, задам им подходящие цвета при интерактивных действиях */
+.radio-button input + .radio-button-point {
+  background-image: url(../img/radio-off.svg);
+  display: block;
+  width: 25px;
+  height: 25px;
+}
+.radio-button input:checked + .radio-button-point {
+  background-image: url(../img/radio-on.svg);
+  width: 25px;
+  height: 25px;
+}
+.checkbox-button input + .checkbox-button-point {
+  background-image: url(../img/checkbox-off.svg);
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+.checkbox-button input:checked + .checkbox-button-point {
+  background-image: url(../img/checkbox-on.svg);
+  width: 24px;
+  height: 24px;
+  
+}
+.radio-button-point,
+.checkbox-button-point{
+  background-repeat:no-repeat;
+}
 input[type="radio"],
 input[type="checkbox"] {
   display: none;
@@ -486,7 +450,6 @@ input[type="checkbox"] {
 .shop-name:active {
   background-color: var(--darker-red);
 }
-/* Не уверен правильной ли получлось подобрать псевдокласс */
 input.search[type="search"]:hover {
   background-color: var(--basic-white);
   color: var(--basic-black);
@@ -497,23 +460,32 @@ input.search[type="search"]:hover {
 .register {
   background-color: var(--basic-white);
 }
-
-.sign-in:hover,
+/* пока что не работает */
+.sign-in-icon:hover{
+  fill:  var(--login-navy);
+}
 .register:hover {
   color: var(--basic-red);
 }
-.sign-in:active,
+.sign-in-icon:active,
 .register:active {
-  color: var(--forms-color);
+  background: var(--forms-color);
 }
-.user-avatar:hover,
+.user-avatar:hover .avatar-svg,
 .logout:hover {
-  color: var(--login-navy);
+  fill: var(--login-navy);
 }
+.bradcrumbs:first-child:after{
+  content:"";
+  background-image:url(../img/icon-right-small.svg);
+  display:inline-block;
+  }
 .my-orders:hover,
 .personal-account:hover {
   color: var(--basic-red);
 }
+
+
 .user-name:active,
 .logout:active,
 .my-orders:active,
@@ -582,25 +554,7 @@ input.search[type="search"]:hover {
 .catalog-buttons:active {
   border: 1px solid #ee3643;
 }
-/* Заготовки для кнопок фильтра */
-.radio-button {
-  background-image: url(img/placeholder/25x25.svg);
-}
-.radio-button:hover {
-  background-image: url(img/placeholder/25x25.svg);
-}
-.radio-button:active {
-  background-image: url(img/placeholder/25x25.svg);
-}
-.checkbox-button {
-  background-image: url(img/placeholder/25x25.svg);
-}
-.checkbox-button:hover {
-  background-image: url(img/placeholder/25x25.svg);
-}
-.checkbox-button:active {
-  background-image: url(img/placeholder/25x25.svg);
-}
+
 .services-slider:hover {
   background-color: var(--basic-navy);
 }
