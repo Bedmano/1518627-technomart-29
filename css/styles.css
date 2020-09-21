@@ -75,7 +75,6 @@ body {
   background-color: var(--basic-green);
   color: inherit;
 }
-.search input[type="search"],
 .bookmarks button,
 .cart button {
   background-color: transparent;
@@ -250,8 +249,8 @@ button.activated {
   height: 44px;
   border-radius: 50%;
 }
-.socials li:hover{
-  background-color:var(--basic-red);
+.socials li:hover {
+  background-color: var(--basic-red);
 }
 .links-list {
   color: var(--basic-white);
@@ -260,24 +259,22 @@ button.activated {
   color: var(--gold);
 }
 /* Различные иконки */
-.search input[type="search"] {
-  background-image: url(../img/icon-search.svg);
-  background-repeat: no-repeat;
+/* .search button[type="submit"] {
   opacity: 0.3;
-}
+} */
 .bookmarks svg,
-.cart svg{
+.cart svg {
   opacity: 0.3;
 }
 
 .search input[type="search"]:hover,
 .bookmarks button:hover svg,
-.cart button:hover svg{
+.cart button:hover svg {
   opacity: 1;
 }
 .search input[type="search"]:active,
 .bookmarks button:active svg,
-.cart button:active svg{
+.cart button:active svg {
   opacity: 0.5;
 }
 .new,
@@ -376,11 +373,10 @@ button.activated {
   background-image: url(../img/checkbox-on.svg);
   width: 24px;
   height: 24px;
-  
 }
 .radio-button-point,
-.checkbox-button-point{
-  background-repeat:no-repeat;
+.checkbox-button-point {
+  background-repeat: no-repeat;
 }
 input[type="radio"],
 input[type="checkbox"] {
@@ -450,19 +446,14 @@ input[type="checkbox"] {
 .shop-name:active {
   background-color: var(--darker-red);
 }
-input.search[type="search"]:hover {
-  background-color: var(--basic-white);
-  color: var(--basic-black);
-}
-
 /* поля логина */
 .sign-in,
 .register {
   background-color: var(--basic-white);
 }
 /* пока что не работает */
-.sign-in-icon:hover{
-  fill:  var(--login-navy);
+.sign-in-icon:hover {
+  fill: var(--login-navy);
 }
 .register:hover {
   color: var(--basic-red);
@@ -475,16 +466,15 @@ input.search[type="search"]:hover {
 .logout:hover {
   fill: var(--login-navy);
 }
-.bradcrumbs:first-child:after{
-  content:"";
-  background-image:url(../img/icon-right-small.svg);
-  display:inline-block;
-  }
+.bradcrumbs:first-child:after {
+  content: "";
+  background-image: url(../img/icon-right-small.svg);
+  display: inline-block;
+}
 .my-orders:hover,
 .personal-account:hover {
   color: var(--basic-red);
 }
-
 
 .user-name:active,
 .logout:active,
