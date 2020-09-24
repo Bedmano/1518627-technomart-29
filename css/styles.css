@@ -59,17 +59,78 @@ body {
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
+  min-width: 940px;
+}
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+.hidden-header {
+  display: none;
 }
 .main-header {
   background-color: var(--blue-gray);
+  display: grid;
+  grid-template-rows: 50px 1fr 60px;
 }
 .header-forms {
   background-color: var(--basic-navy);
   color: var(--basic-white);
+  display: grid;
+  grid-template-columns: 220px 270px 150px 150px 150px;
+}
+.shop {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+}
+header .navigation-list {
+  display: grid;
+  grid-template-columns: repeat(7, min-content);
+  list-style: none;
+}
+.features {
+  display: grid;
+  grid-template-rows: repeat(3, 150px);
+  grid-template-columns: repeat(3, 300px);
+  gap: 20px;
+}
+.slider {
+  grid-row-start: 2;
+  grid-row-end: -1;
+  grid-column-start: 1;
+  grid-column-end: -2;
+  margin: 0;
+}
+.popular-goods {
+  display: grid;
+  grid-template-rows: 100px 340px;
+  grid-template-columns: repeat(4, 220px);
+  gap: 20px;
+}
+.popular-makers {
+  display: grid;
+  grid-template-columns: repeat(4, 220px);
+  grid-template-rows: 100px 150px 150px;
+  gap: 20px;
+}
+.popular-goods .popular-header,
+.popular-makers .popular-header {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  display: grid;
+  grid-template-columns: 1fr 250px;
+}
+.shop-info {
+  display: grid;
+  grid-template-columns: 560px 380px;
 }
 .shop-name {
   background-color: var(--basic-red);
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  width: 220px;
+  height: 47px;
 }
 .place-order button {
   background-color: var(--basic-green);
@@ -194,12 +255,19 @@ header a {
 .services {
   background-color: var(--blue-gray);
   line-height: 30px;
+  display: grid;
+  grid-template-rows: 1fr 250px;
+  grid-template-columns: 300px 1fr 1fr;
+}
+.services-slider,
+.slider-active {
+  grid-row-start: 2;
+  grid-row-end: -1;
 }
 .services h2,
 .slider-active h3,
 .services-slider button,
-.shop-info h2,
-.shop-map h2 {
+.shop-info h2 {
   font-size: 30px;
   line-height: 30px;
 }
@@ -224,6 +292,27 @@ button.activated {
 }
 .main-footer {
   background-color: var(--light-navy);
+  display: grid;
+  grid-template-rows: min-content;
+}
+.pagination-footer {
+  display: grid;
+  grid-template-columns: 250px 650px;
+}
+.pagination-footer .navigation-list {
+  display: grid;
+  grid-template-columns: repeat(6, min-content);
+  list-style: none;
+}
+.second-line {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+.site-navigation {
+  display: grid;
+  grid-template-columns: repeat(4, min-content);
+  list-style: none;
+  gap: 60px;
 }
 .shop-contacts {
   color: var(--white);
@@ -235,6 +324,17 @@ button.activated {
   background-color: var(--basic-navy);
   font-size: 16px;
   line-height: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  gap: 20px;
+}
+.socials ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.usefull-links ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .copy {
   color: var(--basic-white);
@@ -248,6 +348,7 @@ button.activated {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  list-style: none;
 }
 .socials li:hover {
   background-color: var(--basic-red);
@@ -545,8 +646,12 @@ input[type="checkbox"] {
   border: 1px solid #ee3643;
 }
 
-.services-slider:hover {
+.services-slider button:hover {
   background-color: var(--basic-navy);
+}
+.services-slider.activated button:hover {
+  background-color: var(--light-navy);
+  color: var(--basic-white);
 }
 .pagination-footer a,
 .site-navigation a,
