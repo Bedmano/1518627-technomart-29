@@ -52,34 +52,60 @@
   --gold: #ffd180;
   --lilac: #dc91d8;
   --lightblue: #3bbce3;
-  --yellow: #ffc047;
+  --darker-yellow: #ffc047;
 }
 body {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
-  min-width: 940px;
 }
+.page {
+  height: 100%;
+}
+/* Я знаю,что ты сказал не стоит лепить на body класс, но если я делаю внутри body div с классом, и оборачиваю в него header, main и footer, у меня футер не хочет прилипать к нижне части страницы(когда нет контента в мейне) У нас просто в демке барбершопа именно так и в этих тегах расставлялись классы */
 .page-body {
-  min-height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
+  min-height: 100%;
+  max-width: 100%;
 }
-.hidden-header {
-  display: none;
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
+
 .main-header {
   background-color: var(--blue-gray);
   display: grid;
   grid-template-rows: 50px 1fr 60px;
 }
-.header-forms {
+.main-header .wrapper {
   background-color: var(--basic-navy);
+}
+
+.header-forms {
   color: var(--basic-white);
   display: grid;
   grid-template-columns: 220px 270px 150px 150px 150px;
+}
+.container {
+  margin: 0 auto;
+  width: 940px;
+}
+main .wrapper {
+  background-color: var(--blue-gray);
+}
+footer .wrapper:nth-of-type(2) {
+  background-color: var(--basic-navy);
 }
 .shop {
   display: grid;
@@ -129,7 +155,7 @@ header .navigation-list {
 .shop-name {
   background-color: var(--basic-red);
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
-  width: 220px;
+  max-width: 220px;
   height: 47px;
 }
 .place-order button {
@@ -192,7 +218,7 @@ header a {
   line-height: 30px;
 }
 .feature-item:first-of-type {
-  background-color: var(--gold);
+  background-color: var(--yellow);
 }
 .feature-item:nth-of-type(2) {
   background-color: var(--lightblue);
@@ -204,7 +230,7 @@ header a {
   background-color: var(--mint);
 }
 .feature-item:last-of-type {
-  background-color: var(--yellow);
+  background-color: var(--darker-yellow);
 }
 .features-header {
   font-size: 36px;
@@ -253,7 +279,6 @@ header a {
   background-color: var(--basic-red);
 }
 .services {
-  background-color: var(--blue-gray);
   line-height: 30px;
   display: grid;
   grid-template-rows: 1fr 250px;
@@ -321,7 +346,6 @@ button.activated {
   color: var(--gold);
 }
 .feedback-footer {
-  background-color: var(--basic-navy);
   font-size: 16px;
   line-height: 18px;
   display: grid;
@@ -335,6 +359,51 @@ button.activated {
 .usefull-links ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+/* Сетка каталога */
+.breadcrumbs {
+  display: grid;
+  grid-template-columns: repeat(4, min-content);
+  gap: 10px;
+  list-style: none;
+}
+.grid-box {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+}
+.filter {
+  display: grid;
+  grid-template-columns: 220px;
+  grid-template-rows: 50px 1fr 1fr 1fr;
+}
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(3, 220px);
+  grid-template-rows: 50px 1000px 50px;
+}
+.sort {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  display: grid;
+  grid-template-columns: 250px 450px;
+}
+.sort-list {
+  display: grid;
+  grid-template-columns: 80px 80px 140px 20px 20px;
+  list-style: none;
+}
+.goods-list {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  display: grid;
+  grid-template-columns: repeat(3, 220px);
+  gap: 20px;
+}
+.catalog-links {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, min-content);
 }
 .copy {
   color: var(--basic-white);
@@ -434,6 +503,8 @@ button.activated {
   font-size: 13px;
   line-height: 18px;
   background-color: var(--light-brown);
+  grid-column-start: 1;
+  grid-column-end: -1;
 }
 .filter h4 {
   font-size: 17px;
@@ -483,7 +554,8 @@ input[type="radio"],
 input[type="checkbox"] {
   display: none;
 }
-.range {
+.range input[type="range"],
+.range-values {
   background: var(--light-brown);
 }
 .catalog-buttons {
@@ -493,6 +565,15 @@ input[type="checkbox"] {
   text-transform: uppercase;
   border: 1px solid #e5e5e5;
   background-color: var(--basic-white);
+  padding: 10px 15px;
+}
+.next {
+  padding-left: 32px;
+  padding-right: 31px;
+}
+.show {
+  padding-left: 79px;
+  padding-right: 80px;
 }
 .goods {
   width: 220px;
@@ -518,9 +599,6 @@ input[type="checkbox"] {
 .active {
   background-color: var(--basic-red);
   color: var(--basic-white);
-}
-.aside {
-  background-color: var(--blue-gray);
 }
 
 .popup {
