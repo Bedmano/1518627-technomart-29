@@ -37,9 +37,10 @@
   /* цвет при клике в навигации */
   --darker-navy: #1d2739;
   /*цвет кнопок связанных с заказом */
+  --green-hover: #5fbb2d;
   --basic-green: #63a63e;
   /* наведение на кнопки связанные с заказом */
-  --light-green: #5fbb2d;
+  --light-green: #668853;
   /* цвет зеленых кнопок при клике */
   --green: #518534;
   /* цвет теней зеленых кнопок */
@@ -63,7 +64,6 @@ body {
 .page {
   height: 100%;
 }
-/* Я знаю,что ты сказал не стоит лепить на body класс, но если я делаю внутри body div с классом, и оборачиваю в него header, main и footer, у меня футер не хочет прилипать к нижне части страницы(когда нет контента в мейне) У нас просто в демке барбершопа именно так и в этих тегах расставлялись классы */
 .page-body {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
@@ -85,40 +85,71 @@ body {
 
 .main-header {
   background-color: var(--blue-gray);
-  display: grid;
-  grid-template-rows: 50px 1fr 60px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header .wrapper,
+.header-forms {
+  height: 42px;
 }
 .main-header .wrapper {
   background-color: var(--basic-navy);
+  margin-bottom: 43px;
 }
 
 .header-forms {
   color: var(--basic-white);
-  display: grid;
-  grid-template-columns: 220px 270px 150px 150px 150px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 .container {
   margin: 0 auto;
-  width: 940px;
+  max-width: 940px;
 }
 main .wrapper {
   background-color: var(--blue-gray);
+  height: 522px;
 }
 footer .wrapper:nth-of-type(2) {
   background-color: var(--basic-navy);
 }
-.shop {
-  display: grid;
-  grid-template-columns: repeat(3, 300px);
+.aside {
+  background-color: var(--blue-gray);
+  padding-top: 64px;
+  padding-bottom: 68px;
+  height: 261px;
+  box-sizing: border-box;
 }
-header .navigation-list {
-  display: grid;
-  grid-template-columns: repeat(7, min-content);
-  list-style: none;
+.article-header {
+  font-size: 30px;
+  line-height: 30px;
+  margin-bottom: 25px;
+  margin-top: 0;
+  font-weight: 400;
+}
+.shop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 45px;
+  width: 940px;
+}
+header .main-nav {
+  margin: 0;
+  min-height: 60px;
+  width: 940px;
+}
+.main-nav a {
+  display: block;
+  padding: 16px 24px 20px 27px;
+  justify-content: space-around;
 }
 .features {
   display: grid;
-  grid-template-rows: repeat(3, 150px);
+  grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(3, 300px);
   gap: 20px;
 }
@@ -128,6 +159,23 @@ header .navigation-list {
   grid-column-start: 1;
   grid-column-end: -2;
   margin: 0;
+  position: relative;
+}
+.slider img{
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:1;
+}
+.figure-container{
+  width:100%;
+  background-color:rgba(0, 0, 0, 0.25);
+  position: absolute;
+  z-index:2;
+  top:0;
+  left:0;
+  height:104px;
+  color:var(--basic-white);
 }
 .popular-goods {
   display: grid;
@@ -135,6 +183,7 @@ header .navigation-list {
   grid-template-columns: repeat(4, 220px);
   gap: 20px;
 }
+
 .popular-makers {
   display: grid;
   grid-template-columns: repeat(4, 220px);
@@ -147,25 +196,94 @@ header .navigation-list {
   grid-column-end: -1;
   display: grid;
   grid-template-columns: 1fr 250px;
+  margin-bottom: 20px;
 }
 .shop-info {
   display: grid;
   grid-template-columns: 560px 380px;
 }
-.shop-name {
+.shop-name,
+.shop-name-footer {
   background-color: var(--basic-red);
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
-  max-width: 220px;
+  flex-basis: 220px;
   height: 47px;
+  display: flex;
+  justify-content: center;
 }
+
+.shop-name-footer {
+  height: 68px;
+}
+.shop-name svg {
+  padding: 12px 57px 17px 55px;
+}
+.shop-name-footer svg {
+  padding: 20px 41px 25px 41px;
+}
+.search {
+  min-width: 271px;
+  position: relative;
+  padding-top: 10px;
+  margin-right:47px;
+
+}
+.search button {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  border: none;
+  outline: none;
+  background-color: var(--basic-navy);
+}
+.search svg {
+  opacity: 0.3;
+}
+.pagination:first-of-type {
+  box-shadow: inset 0px -5px 0px #293449;
+}
+.navigation-list {
+  display: flex;
+  list-style: none;
+}
+.search input[type="search"],
+.bookmarks button,
+.cart button,
+.place-order button,
+.range input[type="number"] {
+  outline: none;
+  border: none;
+}
+.search input[type="search"] {
+  padding-left: 28px;
+  background-color: var(--basic-navy);
+}
+
 .place-order button {
   background-color: var(--basic-green);
   color: inherit;
+  padding: 9px 16px;
+  min-height: 42px;
 }
 .bookmarks button,
 .cart button {
   background-color: transparent;
   color: inherit;
+  height:42px;
+  box-sizing: border-box;
+  padding-top:9px;
+  padding-bottom:9px;
+}
+.bookmarks button{
+  padding-left:20px;
+  padding-right:24px;
+}
+.cart button{
+  padding-left:12px;
+  padding-right:21px;
+}
+.added button {
+  background-color: var(--basic-red);
 }
 header a {
   text-decoration: none;
@@ -182,23 +300,61 @@ header a {
 .shop-subtitle {
   font-size: 16px;
   line-height: 23px;
+  margin: 0;
+  padding-left: 30px;
 }
 .phone-number {
   line-height: 30px;
   font-weight: 700;
+  border: 3px solid #ffffff;
+  box-sizing: border-box;
+  padding: 7px 45px 8px 40px;
+  display: flex;
+  align-items: baseline;
+  height: 45px;
+  width: 270px;
+  justify-content: space-between;
 }
-.shop-adress {
+
+.shop-address {
   font-size: 14px;
   color: var(--light-navy);
 }
 .login-forms {
   line-height: 21px;
+  display: flex;
+  height: 45px;
+  justify-content: space-between;
 }
+.login-forms.logged-in {
+  display: flex;
+  flex-direction: row;
+}
+
+.sign-in {
+  margin-right: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.sign-in a,
+.register a {
+  display: block;
+  height: 45px;
+  box-sizing: border-box;
+}
+.sign-in a {
+  width: 121px;
+  padding: 12px 27px 12px 19px;
+}
+.register a {
+  width: 150px;
+  padding: 12px 24px;
+}
+
 .pagination {
   background-color: var(--light-navy);
 }
-.pagination a,
-.pagination-footer a {
+.navigation-list a {
   color: var(--basic-white);
   text-decoration: none;
 }
@@ -206,16 +362,23 @@ header a {
   color: var(--basic-white);
   width: 300px;
   height: 123px;
+  display: flex;
+  margin:0;
 }
-.feature-item a {
+.feature-text a {
   color: var(--basic-white);
   text-decoration: none;
   background-color: rgba(255, 255, 255, 0.3);
+  font-size: 14px;
+  line-height: 18px;
 }
-.feature h3 {
+.feature-item h3 {
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
+}
+.feature-text {
+  padding-left: 22px;
 }
 .feature-item:first-of-type {
   background-color: var(--yellow);
@@ -236,6 +399,27 @@ header a {
   font-size: 36px;
   font-weight: 700px;
   line-height: 36px;
+  margin:0;
+  margin-bottom:5px;
+  padding:23px 0px 0px 24px;
+}
+.features-description{
+  margin:0;
+  padding-bottom:16px;
+  padding-left:24px;
+}
+.slider .slider-left{
+  position: absolute;
+  top:123px;
+  left:25px;
+  z-index:2;
+}
+.slider .slider-right{
+  position: absolute;
+  top:122px;
+  right:21px;
+  z-index:2;
+  transform: rotate(180deg);
 }
 
 .button {
@@ -244,6 +428,8 @@ header a {
   color: var(--basic-white);
   background-color: var(--basic-red);
   text-decoration: none;
+  width: 192px;
+  height: 38px;
 }
 
 .popular-header {
@@ -252,42 +438,81 @@ header a {
   font-size: 30px;
   line-height: 30px;
 }
+
 .goods {
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: 700;
   border: 1px solid var(--outline-color);
+  width: 220px;
+  min-height: 318px;
+  box-sizing: border-box;
+  border: 1px solid #eaeaea;
+  background: var(--basic-white);
+  display: grid;
+  grid-template-rows: 170px 1fr 1fr 40px;
+  position:relative;
 }
+
 .goods h3 {
   line-height: 20px;
   font-size: 18px;
+  padding-left:30px;
+  padding-right:33px;
+  text-align: center;
+  margin-bottom:7px;
 }
 .goods span {
   font-size: 17px;
   line-height: 18px;
   color: var(--light-gray);
   text-decoration: line-through;
+  text-align: center;
+  margin-top:0;
+
 }
 .maker-logo {
   width: 220px;
   height: 145px;
   border: 1px solid var(--outline-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .price {
   font-size: 17px;
   line-height: 18px;
   color: var(--basic-white);
   background-color: var(--basic-red);
+  width: 141px;
+  height: 38px;
 }
 .services {
   line-height: 30px;
-  display: grid;
-  grid-template-rows: 1fr 250px;
-  grid-template-columns: 300px 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
 }
-.services-slider,
-.slider-active {
-  grid-row-start: 2;
-  grid-row-end: -1;
+.services-info {
+  flex-basis: 100%;
+  margin-bottom: 70px;
+}
+.services-slider {
+  display: flex;
+  flex-direction: column;
+  margin-right: 80px;
+}
+.slider-active .text {
+  width: 300px;
+}
+.slider-active img {
+  position: relative;
+  bottom: 150px;
+  left: 145px;
+}
+.slider-active h3 {
+  color: var(--light-navy);
+  font-weight: inherit;
+  text-transform: uppercase;
+  margin-top: 0;
 }
 .services h2,
 .slider-active h3,
@@ -301,6 +526,7 @@ header a {
   font-weight: 400;
   font-size: 13px;
   line-height: 24px;
+  margin: 0;
 }
 .services-slider button {
   font-size: 21px;
@@ -309,6 +535,7 @@ header a {
   height: 61px;
   color: var(--basic-white);
   background-color: var(--light-navy);
+  border: none;
 }
 button.activated {
   color: var(--light-navy);
@@ -322,22 +549,27 @@ button.activated {
 }
 .pagination-footer {
   display: grid;
-  grid-template-columns: 250px 650px;
+  width: 940px;
+  grid-template-columns: 220px 133px 1fr;
+  gap: 20px;
 }
-.pagination-footer .navigation-list {
-  display: grid;
-  grid-template-columns: repeat(6, min-content);
-  list-style: none;
+.footer-nav {
+  grid-column-start: -2;
+  grid-column-end: -1;
+  display: flex;
+  justify-content: space-between;
 }
+
 .second-line {
-  display: grid;
-  grid-template-columns: 1fr auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 53px;
 }
 .site-navigation {
-  display: grid;
-  grid-template-columns: repeat(4, min-content);
+  display: flex;
   list-style: none;
-  gap: 60px;
+  flex-basis: 55%;
+  justify-content: space-between;
 }
 .shop-contacts {
   color: var(--white);
@@ -352,46 +584,58 @@ button.activated {
   grid-template-columns: repeat(3, 300px);
   gap: 20px;
 }
-.socials ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-.usefull-links ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
 /* Сетка каталога */
 .breadcrumbs {
-  display: grid;
-  grid-template-columns: repeat(4, min-content);
-  gap: 10px;
+  display: flex;
   list-style: none;
+}
+.breadcrumbs li {
+  color: var(--basic-black);
+  margin-right: 41px;
+  position: relative;
+}
+.breadcrumbs a {
+  text-decoration: none;
+  color: var(--basic-black);
+}
+.breadcrumbs li:after {
+  position: absolute;
+  content: "";
+  background-image: url(../img/icon-right-small.svg);
+  width: 8px;
+  height: 12px;
+  top: 5px;
+  right: -25px;
+}
+.breadcrumbs li:last-child {
+  margin-right: 0;
+}
+.breadcrumbs-current::after {
+  display: none;
 }
 .grid-box {
   display: grid;
   grid-template-columns: 220px 1fr;
+  gap: 20px;
 }
-.filter {
-  display: grid;
-  grid-template-columns: 220px;
-  grid-template-rows: 50px 1fr 1fr 1fr;
-}
+
 .main-content {
   display: grid;
   grid-template-columns: repeat(3, 220px);
   grid-template-rows: 50px 1000px 50px;
 }
 .sort {
-  grid-column-start: 1;
-  grid-column-end: -1;
-  display: grid;
-  grid-template-columns: 250px 450px;
+  display: flex;
+  width: 700px;
+}
+.sort-header {
+  padding-left: 10px;
 }
 .sort-list {
-  display: grid;
-  grid-template-columns: 80px 80px 140px 20px 20px;
+  display: flex;
   list-style: none;
+  flex-basis: 100%;
+  justify-content: space-evenly;
 }
 .goods-list {
   grid-column-start: 1;
@@ -402,36 +646,74 @@ button.activated {
 }
 .catalog-links {
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(4, min-content);
+  display: flex;
+}
+.catalog-links li {
+  margin-right: 10px;
+}
+.catalog-links li:last-child {
+  margin-right: 0;
+}
+.catalog-links a {
+  text-decoration: none;
+  color: var(--basic-black);
+}
+li .active {
+  background-color: var(--basic-red);
+  color: var(--basic-white);
 }
 .copy {
   color: var(--basic-white);
+  width: 240px;
 }
 .goods button {
   background-image: url(img/red-button.svg);
   background-repeat: no-repeat;
+  border: none;
+  position: absolute;
+  bottom:21px;
+  left:47px;
 }
-.socials li {
+.socials ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0;
+  width: 132px;
+}
+.socials {
+  align-self: center;
+}
+.social-button {
   background: var(--black-navy);
-  width: 44px;
-  height: 44px;
+  width: 43px;
+  height: 43px;
   border-radius: 50%;
   list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.socials li:hover {
+.social-button:hover {
   background-color: var(--basic-red);
 }
 .links-list {
   color: var(--basic-white);
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+  padding: 0;
+}
+.links-list li:last-child {
+  margin-right: 0;
 }
 .links-list a {
   color: var(--gold);
 }
-/* Различные иконки */
-/* .search button[type="submit"] {
-  opacity: 0.3;
-} */
+
 .bookmarks svg,
 .cart svg {
   opacity: 0.3;
@@ -447,15 +729,10 @@ button.activated {
 .cart button:active svg {
   opacity: 0.5;
 }
-.new,
-.goods.new {
+.new {
   background-image: url(../img/new.svg);
   background-repeat: no-repeat;
-}
-
-.sort-unactive.ascending,
-.sort-unactive.descending {
-  border: none;
+  background-position: 100% 0%;
 }
 
 /* стили каталога */
@@ -465,12 +742,31 @@ button.activated {
   height: 45px;
   font-size: 21px;
   line-height: 21px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .user-links {
   font-size: 16px;
   line-height: 18px;
   color: var(--light-navy);
+  display: flex;
+  width:210px;
+  margin-left:45px;
+  justify-content: space-between;
+  position:relative;
 }
+.user-links a:after{
+  background-color:var(--light-navy);
+  border-radius: 50%;
+  content:"";
+  width:5px;
+  height:6px;
+  position:absolute;
+  top:7px;
+  left:88px;
+}
+
 .breadcrumbs,
 .filter,
 .sort {
@@ -489,15 +785,25 @@ button.activated {
 }
 .sort button {
   text-transform: inherit;
-}
-/* тут у меня рамка получилась с прозрачностью, пока не могу понять как поменять разметку(или стили),чтобы сделать нормально*/
-.sort-unactive {
-  opacity: 0.3;
   border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.sort-unactive span {
+  opacity: 0.3;
   border-bottom: 1px dotted var(--basic-red);
 }
 .sort-active {
   color: var(--basic-red);
+}
+.sort-active.sort-ascending path {
+  fill: var(--basic-red);
+}
+.filter {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .filter-header {
   font-size: 13px;
@@ -506,11 +812,76 @@ button.activated {
   grid-column-start: 1;
   grid-column-end: -1;
 }
-.filter h4 {
+.filter fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.0001);
+}
+.filter legend {
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
+}
+.range-filter {
+  display: flex;
+  flex-wrap: wrap;
+}
+.range-controls {
+  background-color: var(--light-brown);
+  width: 220px;
+  height: 80px;
+  position: relative;
+  margin-bottom: 15px;
+  padding: 39px 20px;
+  box-sizing: border-box;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.price-controls input[type="number"] {
+  width: 95px;
+  height: 38px;
+  background-color: var(--light-brown);
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.price-controls:last-child {
+  margin-right: 0;
 }
 .breadcrumbs,
 .sort {
@@ -523,7 +894,6 @@ button.activated {
   line-height: 19px;
   text-transform: uppercase;
 }
-/* спасибо за подсказку. Оно заработало. позже когда именно задание на формы будет, задам им подходящие цвета при интерактивных действиях */
 .radio-button input + .radio-button-point {
   background-image: url(../img/radio-off.svg);
   display: block;
@@ -550,10 +920,7 @@ button.activated {
 .checkbox-button-point {
   background-repeat: no-repeat;
 }
-.range input[type="range"],
-.range-values {
-  background: var(--light-brown);
-}
+
 .catalog-buttons {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
@@ -571,15 +938,7 @@ button.activated {
   padding-left: 79px;
   padding-right: 80px;
 }
-.goods {
-  width: 220px;
-  height: 318px;
-  box-sizing: border-box;
-  border: 1px solid #eaeaea;
-  background: var(--basic-white);
-  padding-top: 22px;
-  padding-left: 33px;
-}
+
 .buy {
   background-color: var(--basic-green);
   box-shadow: inset 0px -3px 0px #367315;
@@ -592,15 +951,11 @@ button.activated {
   border: 3px solid #63a63e;
   color: var(--light-navy);
 }
-.active {
-  background-color: var(--basic-red);
-  color: var(--basic-white);
-}
 
 /* Ховеры и активное состояние */
 /* верх шапки */
-.place-order:hover button {
-  background-color: var(--light-green);
+.place-order button:hover {
+  background-color: var(--green-hover);
 }
 .place-order:active button,
 .bookmarks button:active,
@@ -612,27 +967,30 @@ button.activated {
 .cart:active button {
   background-color: var(--dark-navy);
 }
-.shop-name {
-  background-color: var(--basic-red);
-}
-.shop-name:active {
+
+.shop-name:active,
+.shop-name-footer:active {
   background-color: var(--darker-red);
 }
 /* поля логина */
 .sign-in,
-.register {
+.register,
+.user-info {
   background-color: var(--basic-white);
 }
-/* пока что не работает */
-.sign-in-icon:hover {
-  fill: var(--login-navy);
-}
-.register:hover {
+.register:hover,
+.sign-in:hover {
   color: var(--basic-red);
 }
-.sign-in-icon:active,
+.sign-in:active,
 .register:active {
-  background: var(--forms-color);
+  color: var(--forms-color);
+}
+.sign-in:hover path {
+  fill: var(--light-navy);
+}
+.sign-in:active path {
+  fill: var(--forms-color);
 }
 .user-avatar:hover .avatar-svg,
 .logout:hover {
@@ -654,7 +1012,7 @@ button.activated {
 .personal-account:active {
   color: var(--forms-color);
 }
-/* навигация по сайту */
+
 .pagination li:hover {
   background-color: var(--basic-navy);
 }
@@ -662,6 +1020,7 @@ button.activated {
   background-color: var(--darker-navy);
   opacity: 0.5;
 }
+
 /* Преимущества */
 .feature-item a:hover {
   background-color: rgba(197, 197, 197, 0.3);
@@ -705,9 +1064,19 @@ button.activated {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 /* сортировка */
-.sort-list button:hover {
+.sort-unactive:hover span {
   opacity: 1;
   border-bottom: 1px solid var(--basic-red);
+}
+.sort-unactive:active span {
+  color: var(--basic-red);
+  border: none;
+}
+.sort-unactive.sort-ascending:hover path {
+  fill: var(--basic-black);
+}
+.sort-unactive.sort-ascending:active path {
+  fill: var(--basic-red);
 }
 /* переключение между страницами каталога */
 .catalog-buttons:hover {
@@ -716,28 +1085,24 @@ button.activated {
 .catalog-buttons:active {
   border: 1px solid #ee3643;
 }
-
 .services-slider button:hover {
   background-color: var(--basic-navy);
-}
-.services-slider.activated button:hover {
-  background-color: var(--light-navy);
   color: var(--basic-white);
 }
-.pagination-footer a,
 .site-navigation a,
 .links-list a {
   text-decoration: none;
 }
-.pagination-footer a:hover,
+.footer-nav a:hover,
 .site-navigation a:hover,
 .links-list a:hover {
   text-decoration: underline;
 }
-.pagination-footer a:active,
-.site-navigation a:active {
-  opacity: 0.5;
-}
 .links-list a:active {
   color: var(--basic-red);
+}
+.footer-nav a:active,
+.site-navigation a:active {
+  opacity: 0.5;
+  text-decoration: none;
 }
