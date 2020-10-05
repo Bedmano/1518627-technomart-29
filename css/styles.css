@@ -86,8 +86,9 @@ body {
 .main-header {
   background-color: var(--blue-gray);
   height: 320px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 50px 1fr auto 1fr;
+  gap: 40px;
 }
 
 .main-header .wrapper,
@@ -96,7 +97,6 @@ body {
 }
 .main-header .wrapper {
   background-color: var(--basic-navy);
-  margin-bottom: 43px;
 }
 
 .header-forms {
@@ -134,19 +134,23 @@ footer .wrapper:nth-of-type(2) {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 45px;
   width: 940px;
 }
 header .main-nav {
   margin: 0;
   min-height: 60px;
   width: 940px;
+  padding: 0;
+  flex-wrap: wrap;
+}
+.main-nav li:first-child {
+  margin-left: 53px;
 }
 .main-nav a {
   display: block;
   padding: 16px 24px 20px 27px;
-  justify-content: space-around;
 }
+
 .features {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
@@ -167,6 +171,12 @@ header .main-nav {
   left: 0;
   z-index: 1;
 }
+.slider button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
 .figure-container {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.25);
@@ -177,6 +187,7 @@ header .main-nav {
   height: 104px;
   color: var(--basic-white);
 }
+
 .popular-goods {
   display: grid;
   grid-template-rows: 100px 340px;
@@ -245,13 +256,16 @@ header .main-nav {
   display: flex;
   list-style: none;
 }
+
 .search input[type="search"],
 .bookmarks button,
 .cart button,
 .place-order button,
-.range input[type="number"] {
+.range input[type="number"],
+.goods button{
   outline: none;
   border: none;
+  cursor: pointer;
 }
 .search input[type="search"] {
   padding-left: 28px;
@@ -334,18 +348,17 @@ header a {
   margin-right: 10px;
   display: flex;
   justify-content: space-between;
+  width: 121px;
+  padding: 12px 27px 12px 19px;
 }
-.sign-in a,
-.register a {
+.sign-in,
+.register {
   display: block;
   height: 45px;
   box-sizing: border-box;
 }
-.sign-in a {
-  width: 121px;
-  padding: 12px 27px 12px 19px;
-}
-.register a {
+
+.register {
   width: 150px;
   padding: 12px 24px;
 }
