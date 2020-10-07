@@ -236,7 +236,7 @@ header .main-nav {
   min-width: 271px;
   position: relative;
   padding-top: 10px;
-  flex-grow:1;
+  flex-grow: 1;
 }
 .search button {
   position: absolute;
@@ -460,9 +460,10 @@ header a {
   box-sizing: border-box;
   border: 1px solid #eaeaea;
   background: var(--basic-white);
-  display: grid;
-  grid-template-rows: 170px 1fr 1fr 40px;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .goods h3 {
@@ -473,7 +474,7 @@ header a {
   text-align: center;
   margin-bottom: 7px;
 }
-.goods span {
+.goods p {
   font-size: 17px;
   line-height: 18px;
   color: var(--light-gray);
@@ -681,9 +682,6 @@ li .active {
   background-image: url(img/red-button.svg);
   background-repeat: no-repeat;
   border: none;
-  position: absolute;
-  bottom: 21px;
-  left: 47px;
 }
 .socials ul {
   list-style: none;
@@ -836,10 +834,7 @@ li .active {
   font-weight: 700;
   text-transform: uppercase;
 }
-.range-filter {
-  display: flex;
-  flex-wrap: wrap;
-}
+
 .range-controls {
   background-color: var(--light-brown);
   width: 220px;
