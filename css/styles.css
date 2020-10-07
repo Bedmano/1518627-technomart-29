@@ -236,7 +236,7 @@ header .main-nav {
   min-width: 271px;
   position: relative;
   padding-top: 10px;
-  margin-right: 47px;
+  flex-grow:1;
 }
 .search button {
   position: absolute;
@@ -262,7 +262,7 @@ header .main-nav {
 .cart button,
 .place-order button,
 .range input[type="number"],
-.goods button{
+.goods button {
   outline: none;
   border: none;
   cursor: pointer;
