@@ -262,7 +262,7 @@ header .main-nav {
   position: relative;
   padding-left: 36px;
   padding-bottom: 10px;
-  font-weight: 700;
+
 }
 .delivery-list li:last-child {
   padding-top: 2px;
@@ -670,6 +670,7 @@ header a {
   flex-wrap: wrap;
   justify-content: space-evenly;
   position: relative;
+  align-items: flex-start;
 }
 
 .goods h3 {
@@ -678,8 +679,8 @@ header a {
   padding-left: 30px;
   padding-right: 30px;
   text-align: center;
-  margin-top: 0;
-  margin-bottom: 7px;
+  margin:0;
+  align-self: flex-start;
 }
 .goods p {
   font-size: 17px;
@@ -687,17 +688,24 @@ header a {
   color: var(--light-gray);
   text-decoration: line-through;
   text-align: center;
-  margin-top: 0;
+  margin:0;
   flex-basis: 100%;
 }
 .goods .image-container {
   min-width: 184px;
   height: 164px;
   margin-top: 6px;
+  margin-bottom: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 7px;
+}
+.goods-content{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height:140px;
+  width:100%
 }
 .price {
   font-size: 17px;
@@ -709,7 +717,7 @@ header a {
   height: 38px;
   box-sizing: border-box;
   background-color: transparent;
-  margin-left: 15px;
+  margin-left: 45px;
   align-self: flex-end;
   margin-bottom: 23px;
   padding-top: 9px;
@@ -961,6 +969,9 @@ button.activated {
 }
 .sort-list li:nth-child(2) {
   margin-right: 20px;
+}
+.sort-list button{
+  cursor:pointer;
 }
 .goods-list {
   grid-column-start: 1;
@@ -1285,6 +1296,7 @@ li .catalog-current {
 .radio {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 .filter .radio {
   margin-bottom: 18px;
@@ -1299,6 +1311,7 @@ li .catalog-current {
 .checkbox-button {
   position: relative;
   margin-bottom: 15px;
+  flex-basis: 100%;
 }
 .radio-button {
   position: relative;
