@@ -339,7 +339,9 @@ header .main-nav {
   display: flex;
   list-style: none;
 }
-button {
+button,
+.checkbox-button,
+.radio-button {
   cursor: pointer;
 }
 .search input[type="search"],
