@@ -1,61 +1,44 @@
 :root {
   --basic-white: #ffffff;
   --basic-black: #000000;
-  /* Адрес в футере */
   --basic-white-opacity: rgba(255, 255, 255, 0.5);
   --white: #f3f7f9;
-  /* фон загаловка каталога */
   --whiter: #f2f6f8;
-  /* фон заголовков проихвотителей и товаров на главной странице */
   --white-brown: #f9f5f0;
-  /* фон заголовков и фильтра в каталоге */
   --light-brown: #f7f3ec;
-  /* цвета рамок товаров и производителей */
   --outline-color: #eaeaea;
-  /* фон блоков сервиса и информации про перфораторы  */
   --blue-gray: #f1f5f7;
-  /* старая цена товаров */
   --light-gray: #a9a9a9;
-  /* цвет оформления чекбоксов и наведения на кнопки каталога и преимуществ */
   --forms-color: #c5c5c5;
-  /* Цвет чекбоксов при наведении */
   --forms-active: #b5b5b5;
   --modal-gray: #f1f1f1;
-  /* цвет техномарта и кнопок с ценой */
   --basic-red: #ee3643;
-  /* цвет при клике */
   --darker-red: #ba2732;
-  /* цвет при наведении */
   --dark-red: #ca2c37;
   --credit-red: #ff5357;
-  /* оттенки серого */
   --basic-navy: #293449;
-  /* цвет при клике в формах хедера */
   --dark-navy: #161d29;
-  /* второй тёмно-синий по частоте использования(!у кнопки в закладки цвет бордера этого цвета!) */
   --light-navy: #32425c;
-  /* цвет ховера аватара и выхода из аккаунта */
   --login-navy: #3d546f;
-  /* цвет при клике в навигации */
   --darker-navy: #1d2739;
-  /*цвет кнопок связанных с заказом */
   --green-hover: #5fbb2d;
   --basic-green: #63a63e;
-  /* наведение на кнопки связанные с заказом */
   --light-green: #668853;
-  /* цвет зеленых кнопок при клике */
   --green: #518534;
-  /* цвет теней зеленых кнопок */
   --dark-green: #367315;
-  /* цвета фона иконок соцсетей */
   --black-navy: #212a3a;
-  /* цвета преимуществ */
+  --search-opacity: #69717f;
+  --range:#d7dcde;
   --mint: #8ed78f;
   --yellow: #ffbf47;
   --gold: #ffd180;
   --lilac: #dc91d8;
   --lightblue: #3bbce3;
   --darker-yellow: #ffc047;
+  --range-fill:#00ca74;
+  --range-toggle:#ababab;
+  --range-shadow:#cfcfcf;
+  --catalog-button:#e5e5e5;
 }
 body {
   font-family: "Cuprum", Arial, sans-serif;
@@ -313,27 +296,24 @@ header .main-nav {
 }
 .search {
   position: relative;
-  padding-top: 10px;
-  padding-bottom: 9px;
   flex-grow: 1;
-  margin-left: 14px;
 }
-.search button {
+.search-button {
   position: absolute;
-  left: -3px;
-  top: 11px;
+  left: 17px;
+  top: 12px;
   border: none;
   outline: none;
-  background-color: var(--basic-navy);
+  background-color: inherit;
 }
-.search svg {
-  opacity: 0.3;
+.search-button path {
+  fill: var(--search-opacity);
 }
 .search input[type="search"]::placeholder {
   color: var(--basic-white);
 }
 .pagination:first-of-type {
-  box-shadow: inset 0px -5px 0px #293449;
+  box-shadow: inset 0px -5px 0px var(--basic-navy);
 }
 .navigation-list {
   display: flex;
@@ -356,8 +336,12 @@ button,
   border: none;
 }
 .search input[type="search"] {
-  padding-left: 28px;
+  padding-left: 42px;
   background-color: var(--basic-navy);
+  box-sizing: border-box;
+  width: 100%;
+  height: 42px;
+  display: block;
 }
 .place-order button {
   background-color: var(--basic-green);
@@ -417,7 +401,7 @@ header a {
   flex-basis: 350px;
 }
 .phone-number {
-  border: 3px solid #ffffff;
+  border: 3px solid var(--basic-white);
   box-sizing: border-box;
   display: block;
   height: 45px;
@@ -663,7 +647,7 @@ header a {
   width: 220px;
   height: 318px;
   box-sizing: border-box;
-  border: 1px solid #eaeaea;
+  border: 1px solid var(--outline-color);
   background: var(--basic-white);
   display: flex;
   flex-direction: row;
@@ -1069,20 +1053,28 @@ li .catalog-current {
   opacity: 0.3;
 }
 
-.search input[type="search"]:hover,
 .bookmarks button:hover svg,
 .cart button:hover svg,
-.search input[type="search"]:focus,
 .bookmarks button:focus svg,
 .cart button:focus svg {
   opacity: 1;
 }
-.search input[type="search"]:active,
 .bookmarks button:active svg,
 .cart button:active svg {
   opacity: 0.5;
 }
-
+.search:hover .search-button {
+  opacity: 1;
+}
+.search .search-button:active {
+  opacity: 0.3;
+}
+.search input[type="search"]:focus {
+  background-color: var(--basic-white);
+}
+input[type="search"]:focus + .search-button path {
+  fill: var(--basic-red);
+}
 /* стили каталога */
 
 .user-info {
@@ -1227,13 +1219,13 @@ li .catalog-current {
 
 .range-controls .scale {
   height: 2px;
-  background: #d7dcde;
+  background:var(--range);
 }
 
 .range-controls .bar {
   width: 80%;
   height: 2px;
-  background: #00ca74;
+  background: var(--range-fill);
 }
 
 .range-controls .toggle {
@@ -1244,9 +1236,9 @@ li .catalog-current {
   height: 4px;
   padding: 0;
   border: 8px solid var(--basic-white);
-  background-color: #ababab;
+  background-color: var(--range-toggle);
   border-radius: 50%;
-  box-shadow: 0 2px 1px 0 #cfcfcf;
+  box-shadow: 0 2px 1px 0 var(--range-shadow);
   cursor: pointer;
 }
 
@@ -1400,7 +1392,7 @@ li .catalog-current {
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
-  border: 1px solid #e5e5e5;
+  border: 1px solid var(--catalog-button);
   background-color: var(--basic-white);
   padding: 10px 15px;
 }
@@ -1429,7 +1421,7 @@ li .catalog-current {
 .buy {
   background-color: var(--basic-green);
   border: none;
-  box-shadow: inset 0px -3px 0px #367315;
+  box-shadow: inset 0px -3px 0px var(--dark-green);
   color: var(--basic-white);
   position: relative;
   text-align: center;
@@ -1445,7 +1437,7 @@ li .catalog-current {
 }
 .to-bookmarks {
   background-color: var(--basic-white);
-  border: 3px solid #63a63e;
+  border: 3px solid var(--basic-green);
   border-radius: 2px;
   color: var(--light-navy);
   box-sizing: border-box;
@@ -1794,7 +1786,7 @@ li .catalog-current {
   border: 1px solid var(--forms-color);
 }
 .catalog-buttons:active {
-  border: 1px solid #ee3643;
+  border: 1px solid var(--basic-red);
 }
 .services-slider button:hover,
 .services-slider button:focus {
