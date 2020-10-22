@@ -28,17 +28,17 @@
   --dark-green: #367315;
   --black-navy: #212a3a;
   --search-opacity: #69717f;
-  --range:#d7dcde;
+  --range: #d7dcde;
   --mint: #8ed78f;
   --yellow: #ffbf47;
   --gold: #ffd180;
   --lilac: #dc91d8;
   --lightblue: #3bbce3;
   --darker-yellow: #ffc047;
-  --range-fill:#00ca74;
-  --range-toggle:#ababab;
-  --range-shadow:#cfcfcf;
-  --catalog-button:#e5e5e5;
+  --range-fill: #00ca74;
+  --range-toggle: #ababab;
+  --range-shadow: #cfcfcf;
+  --catalog-button: #e5e5e5;
 }
 body {
   font-family: "Cuprum", Arial, sans-serif;
@@ -654,7 +654,7 @@ header a {
   flex-wrap: wrap;
   justify-content: space-evenly;
   position: relative;
-  align-items: flex-start;
+  align-items: flex-end;
 }
 
 .goods h3 {
@@ -664,7 +664,6 @@ header a {
   padding-right: 30px;
   text-align: center;
   margin: 0;
-  align-self: flex-start;
 }
 .goods p {
   font-size: 17px;
@@ -856,10 +855,12 @@ button.activated {
   font-style: normal;
   margin-bottom: 0;
 }
-.shop-contacts p {
+.shop-contacts a {
   margin: 0;
   padding-left: 1px;
   padding-top: 1px;
+  text-decoration: none;
+  color: inherit;
 }
 .site-navigation a {
   color: var(--gold);
@@ -1219,7 +1220,7 @@ input[type="search"]:focus + .search-button path {
 
 .range-controls .scale {
   height: 2px;
-  background:var(--range);
+  background: var(--range);
 }
 
 .range-controls .bar {
@@ -1726,13 +1727,16 @@ input[type="search"]:focus + .search-button path {
 .goods .popup {
   display: none;
 }
-.goods:hover .popup {
+.goods:hover .popup,
+.goods:focus .popup {
   display: block;
   min-width: 184px;
   height: 164px;
   margin-top: 6px;
+  margin-bottom: 8px;
 }
-.goods:hover .image-container {
+.goods:hover .image-container,
+.goods:focus .image-container {
   display: none;
 }
 .goods:hover,
