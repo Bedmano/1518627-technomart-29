@@ -26,11 +26,11 @@
         </a>
         <form class="search" method="get" action="#">
           <input type="search" name="search" placeholder="Поиск:" aria-label="Поле поиска">
-          <svg class="search-button" width="17" height="17" viewBox="0 0 17 17" fill="none">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"
-              fill="#FFFFFF" />
-          </svg>
+          <button class="search-button" type="submit"><svg class="search-icon" width="17" height="17" viewBox="0 0 17 17" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"
+                fill="#FFFFFF" />
+            </svg></button>
         </form>
         <div class="bookmarks">
           <button type="button"><svg width="14" height="16" viewBox="0 0 14 16" fill="none">
@@ -104,7 +104,7 @@
       <ul class="main-nav navigation-list">
         <li><a href="index.html">Главная</a></li>
         <li><a href="blank.html">Компания</a></li>
-        <li><a href="#" aria-label="вы находитесь на этой странице">Каталог</a></li>
+        <li><a href="#" aria-label="Каталог,вы сейчас находитесь на этой странице">Каталог</a></li>
         <li><a href="blank.html">Новости</a></li>
         <li><a href="blank.html">Спецпредложения</a></li>
         <li><a href="blank.html">Доставка</a></li>
@@ -122,7 +122,7 @@
                 d="M13.831 6.365L12 4.751V0H9.99998V2.987L7.33198 0.635C7.31198 0.618 7.28898 0.612 7.26798 0.598C7.24294 0.579705 7.21614 0.56396 7.18798 0.551C7.15708 0.540195 7.12529 0.532163 7.09298 0.527C7.06198 0.521 7.03198 0.515 6.99998 0.515C6.96898 0.515 6.93898 0.521 6.90798 0.527C6.87551 0.531919 6.84366 0.5403 6.81298 0.552C6.78498 0.563 6.75998 0.581 6.73298 0.598C6.71198 0.612 6.68798 0.618 6.66898 0.635L0.170976 6.365C0.0162401 6.50291 -0.0375953 6.72187 0.0355474 6.9158C0.10869 7.10974 0.293707 7.23862 0.500976 7.24C0.622907 7.24035 0.740711 7.19586 0.831976 7.115L6.99998 1.677L13.169 7.115C13.3778 7.27913 13.6784 7.25178 13.8542 7.05265C14.0299 6.85352 14.0198 6.55183 13.831 6.365Z"
                 fill="#C1C6CE" />
             </svg></a></li>
-        <li><a href="#" aria-label="вы находитесь на этой странице">Каталог</a></li>
+        <li><a href="#" aria-label="Каталог,вы сейчас находитесь на этой странице">Каталог</a></li>
         <li><a href="blank.html" aria-label="перейти на страницу со всеми инструментами">Инструмент</a></li>
         <li class="breadcrumbs-current" aria-label="перейти на странице со всеми перфораторами"><a
             href="blank.html">Перфораторы</a></li>
@@ -132,7 +132,7 @@
         <section class="filter">
           <h3 class="filter-header">Фильтр:</h3>
           <form action="https://echo.htmlacademy.ru/" class="filter" method="get">
-            <fieldset class="range" aria-label="Фильтр цены">
+            <fieldset class="range">
               <legend class="price-header">Цена:</legend>
               <div class="range-filter">
                 <div class="range-controls">
@@ -159,42 +159,42 @@
                 </div>
               </div>
             </fieldset>
-            <fieldset class="checkbox" aria-label="фильтр по производителям">
+            <fieldset class="checkbox">
               <legend class="maker-header">Производители:</legend>
               <label class="checkbox-button" aria-label="Выбрать Bosch">
                 <input class="visually-hidden" type="checkbox" name="makers" checked>
                 <span class="checkbox-button-point"></span>
                 <span class="title">BOSCH</span>
               </label>
-              <label class="checkbox-button" aria-label="Выбрать Интерскол" tabindex="0">
+              <label class="checkbox-button" aria-label="Выбрать Интерскол">
                 <input class="visually-hidden" type="checkbox" name="makers">
                 <span class="checkbox-button-point"></span>
                 <span class="title">Интерскол</span>
               </label>
-              <label class="checkbox-button" aria-label="Выбрать Makita" tabindex="0">
+              <label class="checkbox-button" aria-label="Выбрать Makita">
                 <input class="visually-hidden" type="checkbox" name="makers" checked>
                 <span class="checkbox-button-point"></span>
                 <span class="title">Makita</span>
               </label>
-              <label class="checkbox-button" aria-label="Выбрать DeWalt" tabindex="0">
+              <label class="checkbox-button" aria-label="Выбрать DeWalt">
                 <input class="visually-hidden" type="checkbox" name="makers">
                 <span class="checkbox-button-point"></span>
                 <span class="title">DeWalt</span>
               </label>
-              <label class="checkbox-button" aria-label="Выбрать Hitachi" tabindex="0">
+              <label class="checkbox-button" aria-label="Выбрать Hitachi">
                 <input class="visually-hidden" type="checkbox" name="makers">
                 <span class="checkbox-button-point"></span>
                 <span class="title">Hitachi</span>
               </label>
             </fieldset>
-            <fieldset class="radio" aria-label="Фильтр по типу питания">
+            <fieldset class="radio">
               <legend class="radio-header">Питание:</legend>
-              <label class="radio-button" aria-label="Выбрать на аккуляторе" tabindex="0">
+              <label class="radio-button" aria-label="Выбрать на аккуляторе">
                 <input class="visually-hidden" type="radio" name="power" checked>
                 <span class="radio-button-point"></span>
                 <span class="title">Аккумуляторные</span>
               </label>
-              <label class="radio-button" aria-label="Выбрать с питанием от сети" tabindex="0">
+              <label class="radio-button" aria-label="Выбрать с питанием от сети">
                 <input class="visually-hidden" type="radio" name="power">
                 <span class="radio-button-point"></span>
                 <span class="title">Сетевые</span>
@@ -513,8 +513,8 @@
             </article>
           </section>
           <ul class="catalog-links">
-            <li><a class="catalog-current catalog-buttons" title="Вы находитесь на этой странице"
-                aria-label="Вы находитесь на этой страниц">1</a></li>
+            <li><a class="catalog-current catalog-buttons" title="Каталог,вы сейчас находитесь на этой странице"
+                aria-label="Каталог,вы сейчас находитесь на этой странице">1</a></li>
             <li><a href="blank.html" class="catalog-buttons" aria-label="перейти на вторую страницу">2</a></li>
             <li><a href="blank.html" class="catalog-buttons" aria-label="перейти на третью страницу">3</a></li>
             <li><a href="blank.html" class="next catalog-buttons" aria-label="перейти на следующую">Следующая</a></li>
@@ -551,7 +551,7 @@
         <ul class="footer-nav navigation-list">
           <li><a href="blank.html">Компания</a></li>
           <li><a href="blank.html">Новости</a></li>
-          <li><a href="#" aria-label="вы находитесь здесь">Каталог</a></li>
+          <li><a href="#" aria-label="Каталог,вы сейчас находитесь на этой странице">Каталог</a></li>
           <li><a href="blank.html">Доставка</a></li>
           <li><a href="blank.html">Контакты</a></li>
         </ul>

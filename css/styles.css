@@ -300,13 +300,13 @@ header .main-nav {
 }
 .search-button {
   position: absolute;
-  left: 17px;
-  top: 12px;
+  left: 11px;
+  top: 11px;
   border: none;
   outline: none;
   background-color: inherit;
 }
-.search-button path {
+.search-icon path {
   fill: var(--search-opacity);
 }
 .search input[type="search"]::placeholder {
@@ -1064,8 +1064,8 @@ li .catalog-current {
 .cart button:active svg {
   opacity: 0.5;
 }
-.search:hover .search-button {
-  opacity: 1;
+.search:hover .search-icon path {
+  fill:var(--basic-white);
 }
 .search .search-button:active {
   opacity: 0.3;
@@ -1387,6 +1387,10 @@ input[type="search"]:focus + .search-button path {
 }
 .checkbox-button input:disabled + .checkbox-button-point:after {
   background-image: url(../img/checkbox-on-hover.svg);
+}
+.checkbox input[type="checkbox"]:focus + span,
+.radio input[type="radio"]:focus + span {
+  outline: 2px solid var(--basic-navy);
 }
 .catalog-buttons {
   font-family: "PT Sans", Arial, sans-serif;
@@ -1728,25 +1732,27 @@ input[type="search"]:focus + .search-button path {
   display: none;
 }
 .goods:hover .popup,
-.goods:focus .popup {
+.goods:focus .popup,
+.goods:focus-within .popup {
   display: block;
   min-width: 184px;
   height: 164px;
   margin-top: 6px;
   margin-bottom: 8px;
 }
+
 .goods:hover .image-container,
-.goods:focus .image-container {
+.goods:focus .image-container,
+.goods:focus-within .image-container {
   display: none;
 }
 .goods:hover,
-.goods:focus {
+.goods:focus{
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 .buy:hover {
   background-color: var(--green-hover);
 }
-
 .buy:active {
   background-color: var(--green);
 }
@@ -1758,6 +1764,7 @@ input[type="search"]:focus + .search-button path {
   border-color: var(--light-navy);
   opacity: 0.5;
 }
+
 /* карточки производителей */
 .maker-logo:hover,
 .maker-logo:focus {
