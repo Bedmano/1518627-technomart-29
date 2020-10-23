@@ -581,6 +581,10 @@ header a {
   z-index: 2;
   transform: rotate(180deg);
 }
+.slider-left:focus,
+.slider-right:focus {
+  outline: 2px solid var(--basic-red);
+}
 
 .button {
   font-size: 14px;
@@ -621,6 +625,9 @@ header a {
   background-color: var(--basic-white);
   border: 2px solid var(--basic-white);
   border-radius: 50%;
+}
+.slider-controls button:focus {
+  outline: 2px solid var(--basic-red);
 }
 .popular-header {
   background-color: var(--white-brown);
@@ -1065,7 +1072,7 @@ li .catalog-current {
   opacity: 0.5;
 }
 .search:hover .search-icon path {
-  fill:var(--basic-white);
+  fill: var(--basic-white);
 }
 .search .search-button:active {
   opacity: 0.3;
@@ -1075,6 +1082,9 @@ li .catalog-current {
 }
 input[type="search"]:focus + .search-button path {
   fill: var(--basic-red);
+}
+.search-button:focus {
+  outline: 2px solid var(--basic-black);
 }
 /* стили каталога */
 
@@ -1164,7 +1174,9 @@ input[type="search"]:focus + .search-button path {
 .sort-active.sort-ascending path {
   fill: var(--basic-red);
 }
-
+.sort-active:focus {
+  border-bottom: 1px solid var(--basic-black);
+}
 .filter-header {
   font-size: 13px;
   line-height: 18px;
@@ -1747,7 +1759,7 @@ input[type="search"]:focus + .search-button path {
   display: none;
 }
 .goods:hover,
-.goods:focus{
+.goods:focus {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 .buy:hover {
