@@ -24,8 +24,9 @@
               fill="white" />
           </svg>
         </a>
-        <form class="search" method="get" action="#">
-          <input type="search" name="search" placeholder="Поиск:" aria-label="Поле поиска">
+        <form class="search" method="get" action="https://echo.htmlacademy.ru/">
+          <label class="visually-hidden" for="search"></label>
+          <input type="search" name="search" id="search" placeholder="Поиск:" aria-label="Поле поиска">
           <button class="search-button" type="submit"><svg class="search-icon" width="17" height="17"
               viewBox="0 0 17 17" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -108,7 +109,7 @@
         <h2 class="visually-hidden">Преимущества магазина</h2>
         <div class="feature-item">
           <svg class="new" width="70" height="70" viewBox="0 0 70 70" fill="none">
-            <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="70" height="70">
+            <mask id="mask0" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="70" height="70">
               <rect width="70" height="70" fill="#C4C4C4" />
             </mask>
             <g mask="url(#mask0)">
@@ -193,10 +194,10 @@
         </div>
         <article class="goods" tabindex="0">
           <div class="image-container">
-            <img src="img/bosch9000.jpg" alt="" width="184" height="164">
+            <img src="img/bosch9000.jpg" alt="Перфоратор BOSCH BFG 9000" width="184" height="164">
           </div>
           <div class="popup">
-            <button type="button" class="buy" aria-label="добавить в корзину Перфоратор Bosch BFG 9000"><svg width="15"
+            <a href="cart.html" class="buy" aria-label="добавить в корзину Перфоратор Bosch BFG 9000"><svg width="15"
                 height="15" viewBox="0 0 15 15" fill="none">
                 <path
                   d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z"
@@ -205,7 +206,7 @@
                   d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z"
                   fill="white" />
                 <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" fill="white" />
-              </svg>Купить</button>
+              </svg>Купить</a>
             <button type="button" class="to-bookmarks" aria-label="добавить в закладки Перфоратор Bosch BFG 9000">В
               закладки</button>
           </div>
@@ -217,10 +218,10 @@
         </article>
         <article class="goods" tabindex="0">
           <svg class="new" width="70" height="70" viewBox="0 0 70 70" fill="none">
-            <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="70" height="70">
+            <mask id="mask1" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="70" height="70">
               <rect width="70" height="70" fill="#C4C4C4" />
             </mask>
-            <g mask="url(#mask0)">
+            <g mask="url(#mask1)">
               <rect x="22.2133" y="-23" width="100" height="30" transform="rotate(45 22.2133 -23)" fill="#EE3643" />
               <path
                 d="M34.4527 19.1096L41.3823 12.1799L42.3723 13.1699L39.5014 20.0995L39.5509 20.149L44.4512 15.2488L45.3421 16.1397L38.4125 23.0694L37.4226 22.0794L40.2934 15.1498L40.2439 15.1003L35.3437 20.0005L34.4527 19.1096ZM39.7988 24.4557L46.7285 17.526L50.0943 20.8919L49.4013 21.5848L46.9264 19.1099L44.6496 21.3868L46.8275 23.5647L46.1345 24.2577L43.9566 22.0798L41.3827 24.6537L43.8576 27.1285L43.1646 27.8215L39.7988 24.4557ZM44.899 29.5558L50.6902 21.4878L51.5811 22.3787L47.1264 28.6154L47.1759 28.6649L52.3236 25.695L53.2146 26.586L50.2447 31.7337L50.2942 31.7832L56.5309 27.3285L57.4218 28.2194L49.3538 34.0106L48.2648 32.9217L51.304 27.6452L51.2644 27.6056L45.9879 30.6448L44.899 29.5558Z"
@@ -228,10 +229,10 @@
             </g>
           </svg>
           <div class="image-container">
-            <img src="img/bosch3000.jpg" alt="" width="127" height="112">
+            <img src="img/bosch3000.jpg" alt="Перфоратор BOSCH BFG 3000" width="127" height="112">
           </div>
           <div class="popup">
-            <button type="button" class="buy" aria-label="добавить в корзину Перфоратор Bosch BFG 3000"><svg width="15"
+            <a href="cart.html" class="buy" aria-label="добавить в корзину Перфоратор Bosch BFG 3000"><svg width="15"
                 height="15" viewBox="0 0 15 15" fill="none">
                 <path
                   d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z"
@@ -240,7 +241,7 @@
                   d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z"
                   fill="white" />
                 <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" fill="white" />
-              </svg>Купить</button>
+              </svg>Купить</a>
             <button type="button" class="to-bookmarks" aria-label="добавить в закладки Перфоратор Bosch BFG 3000">В
               закладки</button>
           </div>
@@ -252,10 +253,10 @@
         </article>
         <article class="goods" tabindex="0">
           <div class="image-container">
-            <img src="img/bosch6000.jpg" alt="" width="144" height="128">
+            <img src="img/bosch6000.jpg" alt="Перфоратор Bosch BFG 6000" width="144" height="128">
           </div>
           <div class="popup">
-            <button type="button" class="buy"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+            <a href="cart.html" class="buy"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"
                 aria-label="добавить в корзину Перфоратор Bosch BFG 6000">
                 <path
                   d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z"
@@ -264,7 +265,7 @@
                   d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z"
                   fill="white" />
                 <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" fill="white" />
-              </svg>Купить</button>
+              </svg>Купить</a>
             <button type="button" class="to-bookmarks" aria-label="добавить в закладки Перфоратор Bosch BFG 6000">В
               закладки</button>
           </div>
@@ -276,10 +277,10 @@
         </article>
         <article class="goods" tabindex="0">
           <svg class="new" width="70" height="70" viewBox="0 0 70 70" fill="none">
-            <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="70" height="70">
+            <mask id="mask2" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="70" height="70">
               <rect width="70" height="70" fill="#C4C4C4" />
             </mask>
-            <g mask="url(#mask0)">
+            <g mask="url(#mask2)">
               <rect x="22.2133" y="-23" width="100" height="30" transform="rotate(45 22.2133 -23)" fill="#EE3643" />
               <path
                 d="M34.4527 19.1096L41.3823 12.1799L42.3723 13.1699L39.5014 20.0995L39.5509 20.149L44.4512 15.2488L45.3421 16.1397L38.4125 23.0694L37.4226 22.0794L40.2934 15.1498L40.2439 15.1003L35.3437 20.0005L34.4527 19.1096ZM39.7988 24.4557L46.7285 17.526L50.0943 20.8919L49.4013 21.5848L46.9264 19.1099L44.6496 21.3868L46.8275 23.5647L46.1345 24.2577L43.9566 22.0798L41.3827 24.6537L43.8576 27.1285L43.1646 27.8215L39.7988 24.4557ZM44.899 29.5558L50.6902 21.4878L51.5811 22.3787L47.1264 28.6154L47.1759 28.6649L52.3236 25.695L53.2146 26.586L50.2447 31.7337L50.2942 31.7832L56.5309 27.3285L57.4218 28.2194L49.3538 34.0106L48.2648 32.9217L51.304 27.6452L51.2644 27.6056L45.9879 30.6448L44.899 29.5558Z"
@@ -287,10 +288,10 @@
             </g>
           </svg>
           <div class="image-container">
-            <img src="img/bosch3000.jpg" alt="" width="127" height="112">
+            <img src="img/bosch3000.jpg" alt="Перфоратор Bosch BFG 2000" width="127" height="112">
           </div>
           <div class="popup">
-            <button type="button" class="buy"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+            <a href="cart.html" class="buy"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"
                 aria-label="добавить в корзину Перфоратор Bosch BFG 2000">
                 <path
                   d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z"
@@ -299,7 +300,7 @@
                   d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z"
                   fill="white" />
                 <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" fill="white" />
-              </svg>Купить</button>
+              </svg>Купить</a>
             <button type="button" class="to-bookmarks" aria-label="добавить в закладки Перфоратор Bosch BFG 2000">В
               закладки</button>
           </div>
@@ -398,9 +399,10 @@
         <h2>Контакты</h2>
         <p class="text">Вы можете забрать товар сами,<br>
           заехав в наш офис:</p>
-        <img class="open-map" src="img/map.jpg" width="300" height="158"
-          alt="Карта,как добраться до магазина. Адрес магазина:г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-        <button class="button open-feedback" aria-label="открыть окно обраной связи">Заблудились? Напишите нам!</button>
+        <a href="map.html"><img class="open-map" src="img/map.jpg" width="300" height="158"
+            alt="Карта,как добраться до магазина. Адрес магазина:г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></a>
+        <a href="feedback.html" class="button open-feedback" aria-label="открыть окно обраной связи">Заблудились?
+          Напишите нам!</a>
       </section>
     </div>
   </main>
@@ -497,7 +499,7 @@
   <section class="modal-feedback modal">
     <button class="modal-close" type="button" aria-label="Закрыть окно"></button>
     <h2 class="visually-hidden">Напишите нам ваши вопросы</h2>
-    <form class="feedback-form">
+    <form class="feedback-form" action="https://echo.htmlacademy.ru/">
       <div class="feedback-forms">
         <div class="feedback-item">
           <label for="username">Ваше имя:</label>

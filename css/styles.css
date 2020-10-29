@@ -2,6 +2,12 @@
   --basic-white: #ffffff;
   --basic-black: #000000;
   --basic-white-opacity: rgba(255, 255, 255, 0.5);
+  --light-shadow: rgba(0, 0, 0, 0.15);
+  --shadow: rgba(0, 0, 0, 0.24);
+  --dark-shadow: rgba(0, 0, 0, 0.25);
+  --feature-shadow: rgba(255, 255, 255, 0.3);
+  --feature-hover: rgba(197, 197, 197, 0.3);
+  --feature-active: rgba(169, 169, 169, 0.3);
   --white: #f3f7f9;
   --whiter: #f2f6f8;
   --white-brown: #f9f5f0;
@@ -179,7 +185,7 @@ header .main-nav {
 }
 .slide-container {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: var(--dark-shadow);
   position: absolute;
   z-index: 2;
   top: 0;
@@ -276,7 +282,7 @@ header .main-nav {
 .shop-name,
 .shop-name-footer {
   background-color: var(--basic-red);
-  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  box-shadow: inset 0px -5px 0px var(--shadow);
   flex-basis: 220px;
   height: 48px;
   display: flex;
@@ -322,7 +328,8 @@ header .main-nav {
 button,
 .checkbox-button,
 .radio-button,
-.open-map {
+.open-map,
+.buy {
   cursor: pointer;
 }
 .search input[type="search"],
@@ -512,7 +519,7 @@ header a {
 .feature-text a {
   color: var(--basic-white);
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: var(--feature-shadow);
   font-size: 14px;
   line-height: 18px;
   padding-top: 10px;
@@ -651,7 +658,6 @@ header a {
 .goods {
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: 700;
-  border: 1px solid var(--outline-color);
   width: 220px;
   height: 318px;
   box-sizing: border-box;
@@ -1276,12 +1282,18 @@ input[type="search"]:focus + .search-button path {
   background-color: var(--light-brown);
   padding-top: 10px;
   padding-bottom: 16px;
-  padding-left: 17px;
+
   text-align: center;
   box-sizing: border-box;
   font-size: 17px;
   line-height: 18px;
+  -moz-appearance: textfield;
 }
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 .min-price:after {
   content: "—";
   position: absolute;
@@ -1360,7 +1372,7 @@ input[type="search"]:focus + .search-button path {
   border: 2px solid var(--forms-color);
   border-radius: 3px;
   box-sizing: border-box;
-  display: inline-block;
+  display: block;
   width: 23px;
   height: 23px;
   position: absolute;
@@ -1426,13 +1438,14 @@ input[type="search"]:focus + .search-button path {
   padding-left: 79px;
   padding-right: 80px;
 }
+
 .buy,
 .to-bookmarks {
   width: 135px;
   height: 38px;
   text-transform: uppercase;
   box-sizing: border-box;
-  margin-left: 41px;
+  margin-left: 25px;
   font-size: 14px;
   line-height: 18px;
 }
@@ -1444,8 +1457,12 @@ input[type="search"]:focus + .search-button path {
   position: relative;
   text-align: center;
   padding-left: 20px;
+  padding-top: 10px;
   margin-top: 38px;
   margin-bottom: 10px;
+  display: block;
+  font-weight: 400;
+  text-decoration: none;
 }
 .buy svg {
   position: absolute;
@@ -1481,11 +1498,11 @@ input[type="search"]:focus + .search-button path {
 }
 .modal-cart {
   height: 282px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px var(--dark-shadow);
 }
 .modal-feedback {
   height: 430px;
-  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 4px 20px var(--light-shadow));
 }
 .modal-map {
   width: 943px;
@@ -1509,7 +1526,7 @@ input[type="search"]:focus + .search-button path {
   font-weight: 700;
   margin-top: 74px;
   margin-left: 176px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0px 4px 4px var(--dark-shadow), 0px 4px 4px var(--dark-shadow);
 }
 .modal-buttons {
   height: 112px;
@@ -1644,7 +1661,15 @@ input[type="search"]:focus + .search-button path {
   top: 16px;
   right: 10px;
 }
-
+.feedback-backup .modal-feedback,
+.map-backup .modal-map,
+.cart-backup .modal-cart {
+  position: relative;
+}
+.feedback-backup form,
+.cart-backup section {
+  padding-top: 1px;
+}
 @keyframes show {
   0% {
     opacity: 0;
@@ -1723,7 +1748,7 @@ input[type="search"]:focus + .search-button path {
 .bradcrumbs:first-child:after {
   content: "";
   background-image: url(../img/icon-right-small.svg);
-  display: inline-block;
+  display: block;
 }
 .my-orders:hover,
 .personal-account:hover,
@@ -1760,10 +1785,10 @@ input[type="search"]:focus + .search-button path {
 /* Преимущества */
 .feature-item a:hover,
 .feature-item a:focus {
-  background-color: rgba(197, 197, 197, 0.3);
+  background-color: var(--feature-hover);
 }
 .feature-item a:active {
-  background-color: rgba(169, 169, 169, 0.3);
+  background-color: var(--feature-active);
 }
 /* Красные кнопки на всех страницах */
 .button:hover,
@@ -1794,7 +1819,7 @@ input[type="search"]:focus + .search-button path {
 }
 .goods:hover,
 .goods:focus {
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 20px var(--light-shadow);
 }
 .buy:hover {
   background-color: var(--green-hover);
@@ -1814,11 +1839,11 @@ input[type="search"]:focus + .search-button path {
 /* карточки производителей */
 .maker-logo:hover,
 .maker-logo:focus {
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 20px var(--light-shadow);
 }
 .maker-logo:active {
   opacity: 0.5;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 20px var(--light-shadow);
 }
 /* сортировка */
 .sort-unactive:hover span,
@@ -1864,6 +1889,7 @@ input[type="search"]:focus + .search-button path {
 }
 .links-list a:active {
   color: var(--basic-red);
+  text-decoration: none;
 }
 .footer-nav a:active,
 .site-navigation a:active {
