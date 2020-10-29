@@ -678,6 +678,8 @@ header a {
   padding-right: 30px;
   text-align: center;
   margin: 0;
+  max-height: 40px;
+  overflow: hidden;
 }
 .goods p {
   font-size: 17px;
@@ -1276,23 +1278,26 @@ input[type="search"]:focus + .search-button path {
   position: relative;
   margin-bottom: 23px;
 }
-.price-controls input[type="number"] {
-  width: 95px;
-  height: 38px;
-  background-color: var(--light-brown);
-  padding-top: 10px;
-  padding-bottom: 16px;
-
-  text-align: center;
-  box-sizing: border-box;
-  font-size: 17px;
-  line-height: 18px;
+.input[type="number"]{
   -moz-appearance: textfield;
 }
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
+.price-controls input[type="number"] {
+  width: 95px;
+  height: 38px;
+  background-color: var(--light-brown);
+  padding-top: 10px;
+  padding-bottom: 16px;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 17px;
+  line-height: 18px;
+
+}
+
 
 .min-price:after {
   content: "—";

@@ -8,7 +8,7 @@
     href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap"
     rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/styles.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
@@ -25,8 +25,8 @@
           </svg>
         </a>
         <form class="search" method="get" action="https://echo.htmlacademy.ru/">
-          <label class="visually-hidden" for="search"></label>
-          <input type="search" name="search" id="search" placeholder="Поиск:" aria-label="Поле поиска">
+          <label class="visually-hidden" for="search">Поиск</label>
+          <input type="search" name="search" id="search" placeholder="Поиск:">
           <button class="search-button" type="submit"><svg class="search-icon" width="17" height="17"
               viewBox="0 0 17 17" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -164,27 +164,27 @@
             <fieldset class="checkbox">
               <legend class="maker-header">Производители:</legend>
               <label class="checkbox-button" aria-label="Выбрать Bosch">
-                <input class="visually-hidden" type="checkbox" name="maker" checked>
+                <input class="visually-hidden" type="checkbox" name="customer" value="bosh" checked>
                 <span class="checkbox-button-point"></span>
                 <span class="title">BOSCH</span>
               </label>
               <label class="checkbox-button" aria-label="Выбрать Интерскол">
-                <input class="visually-hidden" type="checkbox" name="maker">
+                <input class="visually-hidden" type="checkbox" name="customer" value="interskol">
                 <span class="checkbox-button-point"></span>
                 <span class="title">Интерскол</span>
               </label>
               <label class="checkbox-button" aria-label="Выбрать Makita">
-                <input class="visually-hidden" type="checkbox" name="maker" checked>
+                <input class="visually-hidden" type="checkbox" name="customer" value="makita" checked>
                 <span class="checkbox-button-point"></span>
                 <span class="title">Makita</span>
               </label>
               <label class="checkbox-button" aria-label="Выбрать DeWalt">
-                <input class="visually-hidden" type="checkbox" name="maker">
+                <input class="visually-hidden" type="checkbox" name="customer" value="dewalt">
                 <span class="checkbox-button-point"></span>
                 <span class="title">DeWalt</span>
               </label>
               <label class="checkbox-button" aria-label="Выбрать Hitachi">
-                <input class="visually-hidden" type="checkbox" name="maker">
+                <input class="visually-hidden" type="checkbox" name="customer" value="hitachi">
                 <span class="checkbox-button-point"></span>
                 <span class="title">Hitachi</span>
               </label>
@@ -192,12 +192,12 @@
             <fieldset class="radio">
               <legend class="radio-header">Питание:</legend>
               <label class="radio-button" aria-label="Выбрать на аккуляторе">
-                <input class="visually-hidden" type="radio" name="power" checked>
+                <input class="visually-hidden" type="radio" name="power" value="battery" checked>
                 <span class="radio-button-point"></span>
                 <span class="title">Аккумуляторные</span>
               </label>
               <label class="radio-button" aria-label="Выбрать с питанием от сети">
-                <input class="visually-hidden" type="radio" name="power">
+                <input class="visually-hidden" type="radio" name="power" value="wired">
                 <span class="radio-button-point"></span>
                 <span class="title">Сетевые</span>
               </label>
@@ -239,7 +239,7 @@
             <!-- 1-й товар -->
             <article class="goods" tabindex="0">
               <div class="image-container">
-                <img src="img/bosch6000.jpg" alt="Перфоратор Bosch BFG 6000" width="144" height="128">
+                <img src="img/bosch6000.jpg" alt="Изображение перфоратора Bosch BFG 6000" width="144" height="128">
               </div>
               <div class="popup">
                 <a href="cart.html" class="buy" aria-label="добавить в корзину Перфоратор Bosch BFG 6000"><svg
@@ -264,7 +264,7 @@
             <!-- 2-й товар -->
             <article class="goods" tabindex="0">
               <div class="image-container">
-                <img src="img/bosch6000.jpg" alt="Перфоратор Bosch BFG 6000" width="144" height="128">
+                <img src="img/bosch6000.jpg" alt="Изображение перфоратора Bosch BFG 6000" width="144" height="128">
               </div>
               <div class="popup">
                 <a href="cart.html" class="buy" aria-label="добавить в корзину Перфоратор Bosch BFG 6000"><svg
@@ -300,7 +300,7 @@
                 </g>
               </svg>
               <div class="image-container">
-                <img src="img/bosch6000.jpg" alt="Перфоратор Bosch BFG 6000" width="144" height="128"></div>
+                <img src="img/bosch6000.jpg" alt="Изображение перфоратора Bosch BFG 6000" width="144" height="128"></div>
               <div class="popup">
                 <a href="cart.html" class="buy" aria-label="добавить в корзину Перфоратор Bosch BFG 6000"><svg
                     width="15" height="15" viewBox="0 0 15 15" fill="none">
@@ -335,7 +335,7 @@
                 </g>
               </svg>
               <div class="image-container">
-                <img src="img/bosch3000.jpg" alt="Перфоратор Bosch BFG 3000" width="127" height="112">
+                <img src="img/bosch3000.jpg" alt="Изображение перфоратора Bosch BFG 3000" width="127" height="112">
               </div>
               <div class="popup">
                 <a href="cart.html" class="buy" aria-label="добавить в корзину Перфоратор Bosch BFG 3000"><svg
@@ -360,7 +360,7 @@
             <!-- 5-й товар -->
             <article class="goods" tabindex="0">
               <div class="image-container">
-                <img src="img/bosch6000.jpg" alt="Перфоратор Bosch BFG 6000" width="144" height="128">
+                <img src="img/bosch6000.jpg" alt="Изображение перфоратора Bosch BFG 6000" width="144" height="128">
               </div>
               <div class="popup">
                 <a href="cart.html" class="buy" aria-label="добавить в корзину Перфоратор Bosch BFG 6000"><svg
@@ -396,7 +396,7 @@
                 </g>
               </svg>
               <div class="image-container">
-                <img src="img/bosch3000.jpg" alt="Перфоратор Bosch BFG 3000" width="127" height="112">
+                <img src="img/bosch3000.jpg" alt="Изображение перфоратора Bosch BFG 3000" width="127" height="112">
               </div>
               <div class="popup">
                 <a href="cart.html" class="buy" aria-label="добавить в корзину Перфоратор Bosch BFG 3000"><svg
@@ -431,7 +431,7 @@
                 </g>
               </svg>
               <div class="image-container">
-                <img src="img/bosch3000.jpg" alt="Перфоратор Bosch BFG 3000" width="127" height="112">
+                <img src="img/bosch3000.jpg" alt="Изображение перфоратора Bosch BFG 3000" width="127" height="112">
               </div>
               <div class="popup">
                 <a href="cart.html" class="buy" aria-label="добавить в корзину Перфоратор Bosch BFG 3000"><svg
@@ -456,7 +456,7 @@
             <!-- 8-й товар -->
             <article class="goods" tabindex="0">
               <div class="image-container">
-                <img src="img/bosch6000.jpg" alt="Перфоратор Bosch BFG 6000" width="144" height="128">
+                <img src="img/bosch6000.jpg" alt="Изображение перфоратора Bosch BFG 6000" width="144" height="128">
               </div>
               <div class="popup">
                 <a href="cart.html" class="buy" aria-label="добавить в корзину Перфоратор Bosch BFG 6000"><svg
@@ -492,7 +492,7 @@
                 </g>
               </svg>
               <div class="image-container">
-                <img src="img/bosch3000.jpg" alt="Перфоратор Bosch BFG 2000" width="127" height="112">
+                <img src="img/bosch3000.jpg" alt="Изображение перфоратора Bosch BFG 2000" width="127" height="112">
               </div>
               <div class="popup">
                 <a href="cart.html" class="buy" aria-label="добавить в корзину Перфоратор Bosch BFG 2000"><svg
@@ -629,7 +629,7 @@
       <button type="button">Продолжить покупки</button>
     </div>
   </section>
-  <script src="js/script.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
