@@ -1,4 +1,6 @@
 {
+  const feedbackLink = document.querySelector(".open-feedback");
+  const mapLink = document.querySelector(".open-map");
   const buyLinks = document.querySelectorAll(".buy");
   const modal = document.querySelectorAll(".modal");
   const close = document.querySelectorAll(".modal-close");
@@ -22,7 +24,7 @@
   } catch (err) {
     isStorageSupport = false;
   }
-  if(feedback){
+  if (feedback) {
     const name = feedback.querySelector("[name=name]");
     const email = feedback.querySelector("[name=email]");
     feedback.addEventListener("submit", function (evt) {
@@ -35,10 +37,8 @@
         }
       }
     });
-  } else{
-    const mapLink = document.querySelector(".open-map");
-    const feedbackLink = document.querySelector(".open-feedback");
-
+  }
+  if (feedbackLink) {
     feedbackLink.addEventListener("click", function (evt) {
       evt.preventDefault();
       modal[0].classList.add("modal-show");
@@ -55,6 +55,8 @@
         name.focus();
       }
     });
+  }
+  if (mapLink) {
     mapLink.addEventListener("click", function (evt) {
       evt.preventDefault();
       modal[1].classList.add("modal-show");
@@ -65,7 +67,4 @@
       }
     });
   }
-
-
-
 }
